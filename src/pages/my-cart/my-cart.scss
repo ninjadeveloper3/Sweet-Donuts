@@ -1,0 +1,421 @@
+page-my-cart {
+  ion-content.content.content-md,
+  ion-content.content.content-ios {
+    background: #eee5e0;
+  }
+
+  .opttruncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  button.footer-buttons,
+  .button-large-ios {
+    color: color($colors, app_theme_clr, base);
+    width: 100%;
+    font-size: 12.5px;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+  }
+
+  .list-md ion-item-sliding,
+  .list-ios ion-item-sliding {
+    background: none;
+  }
+
+  .instructions {
+    margin: 16px auto 0px;
+    width: 90%;
+    padding-left: 4px;
+    background: white;
+    border: 1px solid rgb(193, 193, 193) !important;
+  }
+
+  .cart-footer-act {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    background: #dddddd;
+    position: relative;
+  }
+
+  .cart-footer-act:before {
+    content: "";
+    height: 5px;
+    width: 2px;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0;
+    z-index: 99;
+  }
+
+  .cart-footer-act:after {
+    content: "";
+    height: 5px;
+    width: 2px;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+  }
+
+  .ui-total-bill {
+    color: color($colors, orange-heart, base);
+    text-transform: capitalize;
+    font-size: 100%;
+    font-weight: normal;
+    padding: 4px;
+  }
+
+  .total-bill {
+    font-size: 100%;
+    font-weight: bold;
+    padding: 4px;
+
+    span {
+      font-size: 12px;
+      margin-top: -4px;
+
+      .badge {
+        border-radius: 50px;
+        font-size: 16px;
+        padding: 0;
+        background: #e11382;
+        min-width: 25px;
+        /* width: 20px; */
+        /* height: 25px; */
+        line-height: 25px;
+        text-align: center;
+      }
+    }
+  }
+
+  .ui-total-items {
+    @extend .ui-total-bill;
+    text-align: right;
+    padding: 5px 1em 0px 0;
+    color: #000000;
+  }
+
+  .prods_quantity {
+    text-transform: capitalize;
+    font-size: 150%;
+    padding-left: 3px;
+    text-align: right;
+    padding: 5px 1em 0px 0;
+  }
+
+  .prod_price {
+    color: color($colors, dd_dark, base);
+    font-family: 'Gotham Book' !important;
+    font-size: 14px;
+    padding-top: 3%;
+    white-space: normal;
+  }
+
+  .prod_remarks {
+    white-space: normal;
+    padding-top: 3%;
+    font-size: 14px;
+    color: grey;
+  }
+
+  .cart-item {
+    width: 100%;
+    background: color($colors, white_color, base);
+    text-transform: initial;
+    text-shadow: none;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #eee5de;
+    box-shadow: 0 5px 6px -5px #eee5de;
+    margin-bottom: 8px;
+
+    .item-inner {
+      border-bottom: 0px !important;
+
+      .label {
+        margin: 5px 8px 5px 0px;
+      }
+    }
+  }
+
+  .add-more {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-family: 'Gotham Book' !important;
+  }
+
+  ion-footer {
+    background: color($colors, white_color, base);
+  }
+
+  .ion_list {
+    margin: 10px 0px;
+    margin-bottom: 0px;
+  }
+
+  .inc-dec-btn {
+    background: transparent;
+    font-size: 16px;
+    border-radius: 0px !important;
+  }
+
+  .inc-dec-btn.activated {
+    background: #e11382;
+
+    .add-remove {
+      color: #ffffff;
+    }
+  }
+
+  .minus {
+    padding-top: 3px;
+  }
+
+  .inc-dec {
+    font-size: 20px;
+    display: inline-grid;
+    position: relative;
+    top: 0%;
+    width: 50px;
+    border: none;
+    height: 110px !important;
+  }
+
+  .cart-detail {
+    padding: 8px 0 0 0;
+  }
+
+  .footer-total {
+    padding: 0px 8px 0px 8px;
+
+    button {
+      font-family: 'Gotham Book' !important;
+    }
+  }
+
+  .apply-code {
+    height: 32px;
+  }
+
+  .tex-detail {
+    padding: 4px;
+    font-size: 100%;
+    font-weight: lighter;
+    text-transform: capitalize;
+  }
+
+  .inc-dec span {
+    height: 40px;
+    line-height: 40px;
+    background: color($colors, dd-button-clr, base);
+    color: #ffffff;
+    font-family: 'Gotham Book' !important;
+  }
+
+  .inc-dec-sec {
+    position: absolute;
+    width: 50px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-left: 2px solid #eee5de;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .add-remove {
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    color: #4a4a4a;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  .add-remove-ios {
+    border: none;
+    width: 100%;
+    font-weight: bolder;
+    color: #4a4a4a;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  .minus {
+    padding-top: 3px;
+  }
+
+  ion-icon.add-remove.icon.icon-ios.ion-ios-add {
+    border: none;
+    width: 100%;
+    font-weight: bolder;
+    color: black;
+    font-size: 2.2rem;
+  }
+
+  .add-remove-ios {
+    border: none;
+    width: 100%;
+    font-weight: bolder;
+    color: black;
+    font-size: 2.2rem;
+  }
+
+  .minus {
+    padding-top: 3px;
+  }
+
+  ion-icon.add-remove.icon.icon-ios.ion-ios-add {
+    border: none;
+    width: 100%;
+    font-weight: bolder;
+    color: black;
+    font-size: 2.2rem;
+  }
+
+  .del-button {
+    height: 94% !important;
+    min-height: 4.4rem !important;
+    background: color($colors, dd-button-clr, base) !important;
+  }
+
+  ion-icon.icon.icon-md.ion-md-add-circle,
+  ion-icon.icon.icon-ios.ion-ios-add-circle-outline {
+    color: color($colors, app_theme_clr, base);
+  }
+
+  ion-icon.icon.icon-md.ion-md-remove-circle,
+  ion-icon.icon.icon-ios.ion-ios-remove-circle-outline {
+    color: color($colors, app_theme_clr, base);
+  }
+  // *****************promo code****************
+  .promo_code {
+    height: 3.6rem;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: #ddd;
+    color: #222;
+    margin: 10px auto 0;
+    font-size: 0.7rem;
+    background-color: #ffffff;
+    font-family: 'Gotham Book' !important;
+    font-weight: 500;
+
+    input {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+  }
+
+  .custom-avatar img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .promo-apply {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    position: relative;
+    padding: 0 8px 0 8px;
+
+    button {
+      font-family: 'Gotham Book' !important;
+    }
+
+    .close {
+      position: absolute;
+      right: 16px;
+      color: #4d4d4d;
+    }
+  }
+
+  .promo-applied {
+    @extend .promo-apply;
+    padding: 0px;
+
+    .close {
+      right: 16px;
+      position: absolute;
+    }
+  }
+
+  input.text-input.text-input-md,
+  input.text-input.text-input-ios {
+    margin: 10px 0px 9px 5px;
+    width: 98%;
+  }
+
+  .half-button {
+    border-radius: 4px;
+    font-size: 1em;
+    height: 3.6rem;
+    background: #663806;
+  }
+
+  .half-button-pink {
+    @extend .half-button;
+    background: color($colors, dd-button-clr, base);
+    margin-top: 2.4em;
+    padding: 0px;
+  }
+
+  .outline-btn {
+    margin: 0 auto;
+    background: color($colors, dd-button-clr, base);
+    color: #ffffff;
+    font-size: 16px;
+    border-color: color($colors, dd-button-clr, base);
+    width: 90%;
+    border-radius: 4px;
+  }
+
+  .promo-lbl {
+    color: color($colors, dd-button-clr, base);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px 0 0px 4px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+  }
+
+  // .footer_Div {
+  //   padding: 8px;
+  // }
+
+  .ion-md-checkmark-circle:before,
+  .ion-ios-checkmark-circle:before {
+    color: color($colors, dd-button-clr, base);
+    margin-right: 4px;
+    font-size: 18px;
+  }
+
+  .alert-button-ios span,
+  .alert-button-md span {
+    color: #9e0d5b !important;
+  }
+
+  .emptyMsg {
+    position: absolute;
+    top: 8em;
+    left: 20%;
+    right: 0;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    word-wrap: break-word;
+  }
+}

@@ -1,0 +1,83 @@
+<!--
+  Generated template for the PaymentInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Make Payment</ion-title>
+    <ion-buttons left>
+      <button icon-only ion-button class="backArea" (click)="pop()">
+        <img src="assets/Sweet_Donuts_images/general/back.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="signup-background">
+  <form class="profile-info-form" [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <ion-item class="input-item-dd input-signup" no-lines>
+      <ion-input type="text" value="" placeholder="Email*" onCopy="return false" onDrag="return false"
+                 onDrop="return false"
+                 onCut="return false" onPaste="return false" autocomplete=off></ion-input>
+    </ion-item>
+    <div class="divider" no-padding></div>
+    <ion-row style="position: relative;">
+      <ion-item class="input-item-dd input-signup" no-lines>
+        <ion-input type="text" placeholder="Card Number" id="cardnumber" formControlName="cardnumber"
+                   onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   (ngModelChange)="varifycard($event)" [(ngModel)]="userData.cardnumber"
+                   [class.error1]="!userForm.controls.cardnumber.valid && userForm.controls.cardnumber.dirty"></ion-input>
+      </ion-item>
+      <!-- ERROR -->
+      <ion-item no-lines
+                *ngIf="(userForm.get('cardnumber').hasError('required') ) && userForm.get('cardnumber').touched">
+        <div class="error"
+             *ngIf="userForm.get('cardnumber').hasError('required') && userForm.get('cardnumber').touched">
+          Please enter card Number
+        </div>
+      </ion-item>
+      <!-- //ERROR -->
+    </ion-row>
+    <div class="divider" no-padding></div>
+    <ion-row style="position: relative;">
+      <ion-item class="input-item-dd input-signup" style="width: 50%;border-right: 4px solid #eee5e0;" no-lines>
+        <ion-input type="text" value="" placeholder="cvc" formControlName="cvc" onCopy="return false"
+                   onDrag="return false"
+                   onCut="return false" onDrop="return false" onPaste="return false" autocomplete=off
+                   [(ngModel)]="userData.cvc"
+                   [class.error1]="!userForm.controls.cvc.valid && userForm.controls.cvc.dirty"
+                   (ngModelChange)="checkcvc($event)"></ion-input>
+      </ion-item>
+      <!-- ERROR -->
+      <ion-item no-lines class="cvc-error"
+                *ngIf="( userForm.get('cvc').hasError('maxlength') || userForm.get('cvc').hasError('minlength') || userForm.get('cvc').hasError('required') ) && userForm.get('cvc').touched">
+        <div class="error" *ngIf="userForm.get('cvc').hasError('required') && userForm.get('cvc').touched">
+          Please enter cvc Number
+        </div>
+        <div class="error" *ngIf="userForm.get('cvc').hasError('minlength') && userForm.get('cvc').touched">
+          Please enter minum 3 letter
+        </div>
+        <div class="error" *ngIf="userForm.get('cvc').hasError('maxlength') && userForm.get('cvc').touched">
+          Please enter maximum 3 letter
+        </div>
+      </ion-item>
+      <!-- //ERROR -->
+      <ion-item class="input-item-dd input-signup" style="width: 50%" no-lines>
+        <ion-datetime displayFormat="D MMM YYYY" min="1970" max="2000" placeholder="Expiry">
+        </ion-datetime>
+      </ion-item>
+      <div class="dobIcon"></div>
+    </ion-row>
+    <div class="custom_signup_footer">
+      <div>
+        <button ion-button class="input_item-btn login-btn" block type="submit" [disabled]="!userForm.valid">Make
+          Payment
+          <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+        </button>
+      </div>
+    </div>
+  </form>
+</ion-content>

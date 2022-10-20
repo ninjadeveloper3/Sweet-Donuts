@@ -1,0 +1,102 @@
+<!--
+  Generated template for the ComboDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>{{combo_items.BundleName}}</ion-title>
+    <button ion-button class="cart-root" (click)="setocart()">
+      <ion-icon name="cart"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <button icon-only ion-button class="backArea" (click)="pop()">
+        <img src="assets/Sweet_Donuts_images/general/back.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!-- Custom Toolbar with back arrow + title -->
+  <div class="detail-card">
+    <div class="custom-card-content">
+      <div class="prod-detail">
+        <div class="prod_title">{{combo_items.BundleName}}</div>
+        <p>{{combo_items.Detail}}</p>
+        <div class="prod_descp">{{combo_items.Description}}
+        </div>
+      </div>
+      <div class="prod-price">
+        <div class="price-lbl">Price:</div>
+        <div class="pricing" float-right>PKR {{combo_items.BundlePrice}}</div>
+      </div>
+      <!-- accordion -->
+      <ion-row *ngIf="combo_items.Products != null">
+        <ion-list no-lines class="prod-flavor accordion-list" no-lines>
+          <div class="parent" *ngFor="let item of combo_items.Products; let i = index; let lst = last" no-lines>
+            <ion-thumbnail item-start>
+              <img src="{{imgPathServer}}{{item.Image}}" style="width: 60px;height: 60px;">
+            </ion-thumbnail>
+            <!-- Toggle Button -->
+            <button class="outer-button" (click)="toggleSection(i)" detail-none
+                    [ngClass]="{'section-active': item.open, 'section': !item.open}">
+              <span>{{item.FullName}}
+              </span>
+              <div *ngIf="item.ProductOption.length > 0">
+                <div class="arrow_up" item-right float-right *ngIf="!item.open">
+                  <img src="assets/Sweet_Donuts_images/Bundle-assortments-detail/down.svg">
+                </div>
+                <div class="arrow_down" item-right float-right *ngIf="item.open">
+                  <img src="assets/Sweet_Donuts_images/Bundle-assortments-detail/up.svg">
+                </div>
+              </div>
+            </button>
+            <ion-list *ngIf="item.ProductOption.length > 0" no-lines radio-group style="margin-bottom: 0 !important;"
+                      class="parent-option-list"
+                      [ngClass]="{'divider' : item.open}">
+              <ion-list *ngFor="let child of item.ProductOption; let j = index" no-padding class="option-list">
+                <div *ngIf="!child.IsSize">
+                  <ion-item class="options" style="padding: 0px !important"
+                            *ngFor="let value of child.ProductOptionValue" no-padding
+                            class="option-list inner_list_content">
+                    <ion-label class="cust-option-lable" style="color: #9d9d9d">{{value.FullName}}</ion-label>
+                    <ion-radio style="margin: 0;" value={{value.ID}}
+                               (click)="radioClicked(item,value,child)"></ion-radio>
+                  </ion-item>
+                </div>
+              </ion-list>
+            </ion-list>
+          </div>
+          <!-- <div class="counter">
+            <p>Add Quantity</p>
+            <div class="quantity">
+              <ion-icon name="remove" class="add-remove" (click)="decrement()"></ion-icon>
+              <div class="qty">{{currentNumber}}</div>
+              <ion-icon name="add" class="add-remove" (click)="increment()"></ion-icon>
+            </div>
+          </div> -->
+
+          <div class="counter">
+            <p>Add Quantity</p>
+            <div class="quantity">
+              <button clear class="add-remove" (click)="decrement()">
+                <ion-icon name="remove"></ion-icon>
+              </button>
+              <div class="qty">{{currentNumber}}</div>
+              <button clear class="add-remove" (click)="increment()">
+                <ion-icon name="add"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+
+        </ion-list>
+      </ion-row>
+      <!-- end accordion -->
+      <button ion-button class="input_item-btn ATC" block type="submit" (click)="gotoCart()">ADD TO CART
+        <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+      </button>
+    </div>
+  </div>
+</ion-content>

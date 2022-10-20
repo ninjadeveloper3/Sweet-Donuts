@@ -1,0 +1,114 @@
+<!--
+  Generated template for the AddAdressPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Add Address</ion-title>
+    <ion-buttons left>
+      <button icon-only ion-button class="backArea" (click)="pop()">
+        <img src="assets/Sweet_Donuts_images/general/back.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="add-adress">
+  <div class="tittle">
+    <h3>Enter New Address</h3>
+  </div>
+  <form [formGroup]="userForm" class="address-form" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <div>
+      <ion-item class="input_item">
+        <ion-input type="text" value="" placeholder="Home *" formControlName="home" onCopy="return false" onDrag="return false"
+          onCut="return false" onDrop="return false" onPaste="return false" autocomplete=off [(ngModel)]="userData.home"
+          [class.error1]="!userForm.controls.home.valid && userForm.controls.home.dirty"></ion-input>
+      </ion-item>
+      <!-- ERROR -->
+      <ion-item no-lines *ngIf="(userForm.get('home').hasError('required') ) && userForm.get('home').touched">
+        <div class="error" *ngIf="userForm.get('home').hasError('required') && userForm.get('home').touched">
+          Please add nickname for address
+        </div>
+      </ion-item>
+      <!-- // ERROR -->
+      <ion-item class="input_item">
+        <ion-input type="text" value="" placeholder="Full Name *" formControlName="fname" onCopy="return false" onDrag="return false"
+          onCut="return false" onDrop="return false" onPaste="return false" autocomplete=off [(ngModel)]="userData.fname"
+          [class.error1]="!userForm.controls.fname.valid && userForm.controls.fname.dirty"></ion-input>
+      </ion-item>
+      <!-- ERROR -->
+      <ion-item no-lines *ngIf="userForm.get('fname').hasError('maxlength') || ( userForm.get('fname').hasError('required') ) && userForm.get('fname').touched">
+        <div class="error" *ngIf="userForm.get('fname').hasError('required') && userForm.get('fname').touched">
+          Please enter your full name
+        </div>
+        <div class="error" *ngIf="userForm.get('fname').hasError('maxlength') && userForm.get('home').touched">
+          Maximum length error
+        </div>
+      </ion-item>
+      <!-- //ERROR -->
+      <div class="myWrapper">
+        <ion-item class="input_item cust-address">
+          <ion-searchbar id="input" [(ngModel)]="autocomplete.input" #mySearchbar autocorrect="on" (ionInput)="updateSearchResults()"
+            formControlName="street" class="search " placeholder="Address *" [class.error1]="!userForm.controls.street.valid && userForm.controls.street.dirty">
+          </ion-searchbar>
+        </ion-item>
+        <div class="dobIconEdit" (click)="useCurrentLocation()"></div>
+        <ion-list [hidden]="autocompleteItems.length == 0" class="suggestions">
+          <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+            {{ item.description }}
+          </ion-item>
+        </ion-list>
+      </div>
+      <!-- ERROR -->
+      <ion-item no-lines *ngIf="( userForm.get('street').hasError('required') ) && userForm.get('street').touched">
+        <div class="error" *ngIf="userForm.get('street').hasError('required') && userForm.get('street').touched">
+          Please enter your delivery address
+        </div>
+      </ion-item>
+      <!-- //ERROR -->
+
+      <ion-item class="input_item">
+        <ion-input type="tel" value="" placeholder="Phone Number 03xxxxxxxxx *" onCopy="return false" onDrag="return false"
+          onCut="return false" onDrop="return false" onPaste="return false" autocomplete=off formControlName="phone"
+          [(ngModel)]="userData.phone" [class.error1]="!userForm.controls.phone.valid && userForm.controls.phone.dirty"></ion-input>
+      </ion-item>
+      <!-- ERROR -->
+      <ion-item no-lines *ngIf="( userForm.get('phone').hasError('pattern') || userForm.get('phone').hasError('required') ) && userForm.get('phone').touched">
+        <div class="error" *ngIf="userForm.get('phone').hasError('required') && userForm.get('phone').touched">
+          Please enter your phone number
+        </div>
+        <div class="error" *ngIf="userForm.get('phone').hasError('pattern') && userForm.get('phone').touched">
+          Please enter a valid phone number
+        </div>
+      </ion-item>
+      <!-- //ERROR -->
+
+      <!-- <control-messages [control]="userForm.controls.city"></control-messages> -->
+      <ion-item class="input_item">
+        <ion-input type="tel" value="" placeholder="Zip/Postal Code" formControlName="zip" onCopy="return false" onDrag="return false"
+          onCut="return false" onDrop="return false" onPaste="return false" autocomplete=off [(ngModel)]="userData.zip"
+          [class.error1]="!userForm.controls.zip.valid && userForm.controls.zip.dirty"></ion-input>
+      </ion-item>
+      <!-- ERROR -->
+      <ion-item no-lines *ngIf="( userForm.get('zip').hasError('maxlength') || userForm.get('zip').hasError('pattern') || userForm.get('zip').hasError('required') ) && userForm.get('zip').touched">
+        <div class="error" *ngIf="userForm.get('zip').hasError('pattern') && userForm.get('zip').touched">
+          Please enter a valid zip code
+        </div>
+        <div class="error" *ngIf="userForm.get('zip').hasError('maxlength') && userForm.get('zip').touched">
+          You can use maximum 5 letter
+        </div>
+      </ion-item>
+      <!-- //ERROR -->
+      <ion-item class="input_item">
+        <ion-input type="text" value="Karachi" placeholder="Karachi" onCopy="return false" onDrag="return false" onDrop="return false"
+          onCut="return false" onPaste="return false" autocomplete=off formControlName="city" disabled="true"></ion-input>
+      </ion-item>
+    </div>
+
+  </form>
+  <button ion-button class="input_item-btn" block type="submit" round [disabled]="!userForm.valid" (click)="save()">SAVE
+    <img src="assets/Sweet_Donuts_images/general/arrow.png" />
+  </button>
+
+</ion-content>

@@ -1,0 +1,86 @@
+page-login {
+  .main {
+    padding: 20% 0px 0px 0px;
+  }
+
+  .login-btn img {
+    margin-top: -3px;
+  }
+
+  .button-md.activated,
+  .button-ios.activated {
+    color: #f4821f !important;
+  }
+
+  .button-md.activated,
+  .button-ios.button-md.activated {
+    color: #f4821f !important;
+  }
+
+  .footer {
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: none;
+    color: color($colors, white_color, base);
+    text-transform: initial;
+    padding-bottom: 3em;
+    padding-top: 1em;
+    bottom: 0;
+    font-family: 'Gotham-medium' !important;
+  }
+
+  .buttons {
+    padding-top: 1em;
+    font-family: 'Gotham-bold';
+  }
+
+  .loginForm {
+    padding-top: 40px;
+  }
+
+  .bg-page {
+    background-image: url(../assets/Sweet_Donuts_images/Forgot-password/background.png);
+    background-repeat: no-repeat;
+    // background: transparent;
+    background-size: cover;
+    text-align: center;
+  }
+
+  control-messages div {
+    color: white;
+  }
+
+  .login-btn {
+    background: white;
+    color: color($colors, orange-heart, base);
+    font-family: 'Gotham-bold' !important;
+  }
+
+  .loginFooter {
+    margin-top: 30px;
+  }
+
+  .outline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    box-shadow: none;
+  }
+  // *************placeholder*********************
+  .text-input::-moz-placeholder {
+    color: white;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: white;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    color: white;
+  }
+
+  .later {
+    padding: 16px;
+  }
+}

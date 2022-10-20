@@ -1,0 +1,117 @@
+page-order-review {
+  .scroll-content {
+    margin-bottom: 0px;
+  }
+
+  .tip {
+    text-align: right;
+    margin: 0;
+    border-style: solid;
+    border-radius: .3125em;
+    border-color: color($colors, dd-button-clr, base);
+    color: color($colors, dark, base);
+    font: 400 13.3333px Arial;
+    background-color: color($colors, white_color, base);
+  }
+
+  input.text-input.text-input-md,
+  input.text-input.text-input-ios {
+    margin: 0px 8px;
+  }
+
+  .order-type {
+    padding: 0;
+  }
+
+  .add-more-btn {
+    border: 0.2em solid #c2562f;
+    box-shadow: none;
+    margin: 0 auto;
+    padding: 0.5em;
+    font-size: 100%;
+    width: auto;
+    background-color: #fff;
+    color: #c2562f;
+    text-transform: capitalize;
+  }
+
+  .add-more {
+    background: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    border: none;
+  }
+
+  .color {
+    color: color($colors, orange-heart, base);
+    font-weight: 500;
+  }
+
+  .items {
+    border-bottom: 2px solid #f5f6f1;
+    width: 100%;
+    padding: 8px 8px 8px 8px;
+  }
+
+  .itemsQty {
+    text-align: center !important;
+  }
+
+  .item_name {
+    color: color($colors, dd_dark, base);
+  }
+
+  .ingred_Parent {
+    display: flex;
+    color: color($colors, dd_sub_heading, base);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 4px 0 0 0;
+  }
+
+  .summary_block {
+    padding: 8px 8px 8px 13px;
+    border-bottom: none;
+    color: color($colors, dd_sub_heading, base);
+    text-transform: capitalize;
+    font-weight: 500;
+
+    .currency {
+      color: color($colors, dd_sub_heading, base);
+    }
+  }
+
+  .currency {
+    color: color($colors, dd_dark, base);
+  }
+
+  ion-row.items.summary_block.t_price {
+    margin-top: 12px !important;
+    color: color($colors, orange-heart, base);
+
+    .currency {
+      color: color($colors, orange-heart, base);
+    }
+  }
+
+  .footer-md::before,
+  .footer-ios::before {
+    display: none;
+  }
+
+  .order {
+    width: 91%;
+    margin: 16px;
+    // height: 60px;
+    bottom: 0;
+    margin: 32px 16px 16px 16px;
+  }
+
+  .opttruncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+  }
+}

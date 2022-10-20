@@ -1,0 +1,107 @@
+page-my-addresses {
+  .scroll-content {
+    padding-top: 10px;
+    margin-bottom: 8px !important;
+  }
+
+  .header-md::after {
+    width: 0;
+    display: none;
+  }
+
+  .img_footer {
+    padding: 12px;
+    min-height: 56px;
+    background: color($colors, app_theme_clr, base);
+    color: color($colors, white_color, base);
+  }
+
+  ion-footer img {
+    height: 35px;
+    widows: 25px;
+  }
+
+  .address-card-header > .popover {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+
+  .popover-dots {
+    background: transparent;
+    box-shadow: none;
+    color: color($colors, dark, base);
+  }
+
+  ion-card-header.address-card-header {
+    position: relative;
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  .my-addresses {
+    margin: 4px 0 4px 0;
+    width: 100%;
+    margin-top: 14px;
+    box-shadow: none;
+
+    .card-content {
+      padding-top: 13px;
+    }
+  }
+
+  .bg {
+    background: #eee5e0;
+  }
+
+  .Name-color {
+    color: color($colors, dd-button-clr, base);
+    font-family: 'Gotham-bold' !important;
+  }
+
+  .adress {
+    color: #9d9d9d;
+    margin-bottom: 8px;
+    font-family: 'Gotham Book' !important;
+  }
+
+  .info {
+    color: #4d4d4d;
+    font-weight: 500;
+    font-family: 'Gotham-medium' !important;
+    text-transform: capitalize;
+  }
+
+  .emptyMsg {
+    position: absolute;
+    top: 13em;
+    left: 20%;
+    right: 0;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    word-wrap: break-word;
+  }
+  // .fixed-btn{
+  //   .add-address{
+  //     position: absolute;
+  //   }
+  // }
+
+  .add-address {
+    background: color($colors, dd-button-clr, base);
+    // position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    border-radius: 0px;
+    width: 90%;
+    font-family: 'Gotham Book' !important;
+
+    .icon {
+      position: relative;
+      right: -5px;
+      top: 1px;
+    }
+  }
+}

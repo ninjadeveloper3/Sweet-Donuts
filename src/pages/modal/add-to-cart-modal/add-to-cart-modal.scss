@@ -1,0 +1,37 @@
+page-add-to-cart-modal {
+  .custom-modal {
+    top: 35%;
+    height: 25%;
+    display: inline-grid;
+    align-items: center;
+  }
+
+  .bg {
+    background-image: url(../assets/Sweet_Donuts_images/Add-to-cart-popup/ATC-popup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .info-tittle {
+    margin: 0px;
+  }
+
+  .footer-md::before {
+    top: -2000000px;
+  }
+
+  .footer {
+    margin: 20px;
+    width: 90%;
+    font-family: 'Gotham Book';
+  }
+
+  .outline-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

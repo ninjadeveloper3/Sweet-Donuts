@@ -1,0 +1,38 @@
+page-food-feedback {
+  .section {
+    background: #fff;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  .section-active {
+    background: color($colors, dd-button-clr, base);
+    // color: #fff !important;
+  }
+
+  .bg-popup {
+    background-image: url(../assets/Sweet_Donuts_images/Home/stor-info-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .remarks {
+    height: 100px;
+    border: 2px solid #eee5e0 !important;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .tittle h4 {
+    font-size: 12px;
+  }
+
+  .feedback-modlal .label {
+    font-weight: 600;
+  }
+
+  .feed {
+    margin: 8px 2px 8px 2px !important;
+  }
+}

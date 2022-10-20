@@ -1,0 +1,275 @@
+page-combo-details {
+  ion-thumbnail {
+    display: inline-grid;
+    padding: 0px 0px 0px 12px;
+    vertical-align: middle;
+
+    img {
+      height: 60px !important;
+      width: 100px !important;
+      object-fit: cover;
+    }
+  }
+
+  .prod-price {
+    background: #ffffff;
+    padding: 20px 12px 20px 16px;
+    margin-bottom: 10px;
+  }
+
+  .detail-card {
+    width: 100%;
+    margin: -17px 0px 0px 0px;
+
+    .prod-detail {
+      padding: 16px;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      background: #ffffff;
+    }
+
+    .prod_img {
+      width: 100%;
+      height: 28vh;
+    }
+
+    .prod_title {
+      font-size: 1.5em;
+      width: 90%;
+      font-weight: 900;
+      color: color($colors, orange-heart, base);
+      font-family: 'Gotham-black' !important;
+    }
+
+    .prod-detail p {
+      color: color($colors, dd_sub_heading, base);
+      font-family: 'Gotham-medium';
+      margin-top: 5px;
+    }
+
+    .custom-card-content {
+      position: relative;
+      // height: 72vh;
+    }
+
+    .arrow_down {
+      position: absolute;
+      color: color($colors, orange-heart, base);
+      right: 12px;
+      top: 16px;
+      height: 15px;
+      width: 15px;
+    }
+
+    .arrow_up {
+      @extend .arrow_down;
+    }
+
+    .item-md.item-block .item-inner,
+    .item-ios.item-block .item-inner {
+      padding-right: 0px !important;
+      margin-bottom: 16px !important;
+    }
+
+    ion-icon.icon.icon-md.ion-md-share {
+      right: 35px;
+    }
+
+    .prod_descp {
+      font-size: 12px;
+      height: 100%;
+      max-height: 100%;
+      color: #4a4a4a;
+      font-weight: lighter;
+      font-family: 'Gotham Book';
+      text-align: justify;
+    }
+
+    .price-lbl {
+      display: initial;
+      font-weight: bold;
+      color: color($colors, orange-heart, base);
+      font-family: 'Gotham-bold';
+    }
+
+    .pricing {
+      @extend .price-lbl;
+      color: color($colors, dd-button-clr, base);
+    }
+
+    .ATC {
+      background: color($colors, dd-button-clr, base);
+      width: 90%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: white;
+      font-family: 'Gotham Book';
+    }
+  }
+
+  .prod-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: color($colors, white_color, base);
+  }
+
+  .prod-list {
+    margin-bottom: 0;
+  }
+
+  //   ---------------Accordian List---------------------
+  .accordion-list {
+    // background: lightblue;
+    height: 100%;
+
+    p {
+      display: inline-block;
+      color: black;
+      font-family: 'Gotham-bold';
+    }
+  }
+
+  .accordion-list {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .parent .outer-button {
+    font-weight: 600;
+    border-bottom: 0;
+    line-height: 2;
+    width: 65%;
+    position: absolute;
+    height: 60px;
+    padding: 0 30px 0 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+
+    ion-icon {
+      position: initial;
+    }
+  }
+
+  .outer-button span {
+    color: #e11382;
+    font-size: 16px;
+    font-family: 'Gotham Book';
+    // padding-left: 10px;
+  }
+
+  .section-active {
+    background: color($colors, dd-button-clr, base);
+  }
+
+  .divider {
+    // border-top: 4px solid !important;
+    padding-bottom: 8px;
+    border-top: 1px solid #eee5e0;
+    margin-top: 8px !important;
+    margin-bottom: 10px;
+  }
+
+  .section {
+    background: #fff;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  .parent-option-list {
+    padding: 0px 0px 0px 4px;
+    border-bottom: none !important;
+  }
+
+  .parent {
+    background: #ffffff;
+    padding: 12px 8px 12px 4px;
+    margin-bottom: 10px;
+
+    .parent-option-list.divider {
+      .option-list {
+        height: auto !important;
+        padding: 1px 7px !important;
+        font-family: 'Gotham Book';
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+
+  .options {
+    font-size: 12px;
+    padding-left: 8px;
+    margin: 8px 0 8px 0px;
+  }
+  //   ------------------------------------
+  //   ---------Quantity counter-----------
+  // .quantity {
+  //   padding-top: 5px;
+  //   float: right;
+  //   display: flex;
+
+  //   .add-remove {
+  //     background: transparent;
+  //   }
+
+  //   .add-remove.activated {
+  //     color: #ffffff;
+  //     background: #e11382;
+  //   }
+  // }
+  .quantity {
+    width: auto;
+    display: inline-flex;
+    float: right;
+
+    .add-remove {
+      background: transparent;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        line-height: 30px;
+      }
+    }
+
+    .add-remove.activated {
+      color: #ffffff;
+      background: #e11382;
+    }
+  }
+
+  // .counter {
+  //   font-size: 14px;
+  //   color: black;
+  //   font-weight: bold;
+  //   background: #ffffff;
+  //   padding: 12px 12px 12px 12px;
+  //   // margin-bottom: 10px;
+  // }
+  .counter {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    background: #ffffff;
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 20px 20px 20px 16px;
+    margin-top: 0px;
+  }
+
+  .counter p {
+    display: initial;
+    line-height: 2;
+    font-weight: 1.4rem;
+    font-family: 'Gotham-bold' !important;
+    color: #4a4a4a;
+  }
+  //   --------------------------------------- 
+}

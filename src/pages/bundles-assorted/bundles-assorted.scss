@@ -1,0 +1,62 @@
+page-bundles-assorted {
+  ion-header,
+  ion-navbar {
+    height: 80px;//by default 56px
+  }
+
+  .content {
+    padding: 9px 8px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: color($colors, orange-heart, base);
+    font-family: 'Gotham-medium';
+    text-transform: capitalize;
+  }
+
+  .assort-card {
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+    margin: 10px 0px;
+  }
+
+  .assort {
+    margin: 12px;
+
+    img {
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  .combo {
+    position: absolute;
+    font-size: 1.3em;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    top: 28%;
+  }
+
+  .absolute-card-title {
+    position: relative;
+    bottom: 0;
+    margin-top: -30px;
+    z-index: 99999;
+    color: white;
+    font-size: 16px;
+    padding-left: 8px;
+    font-family: 'Gotham-black';
+    text-transform: capitalize;
+  }
+
+  p.sub_name {
+    font-size: 14px;
+    color: color($colors, dd_sub_heading, base);
+    font-family: 'Gotham-medium';
+  }
+}

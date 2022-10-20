@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Select Delivery Area</ion-title>
+    <button ion-button class="cart-root" (click)="setocart()">
+      <ion-icon name="cart"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home-bg" no-bounce>
+  <div #map id="map" (click)="mapClick()"></div>
+  <ion-searchbar id="input" [(ngModel)]="autocomplete.input" #mySearchbar autocorrect="on" (ionInput)="updateSearchResults()"
+    class="search" placeholder="Select your Location">
+    <ion-icon name="add" text-right></ion-icon>
+  </ion-searchbar>
+  <input type="checkbox" class="my_gps" (click)="current_location()" />
+  <ion-list [hidden]="autocompleteItems.length == 0" class="suggestions">
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+      {{ item.description }}
+    </ion-item>
+  </ion-list>
+  <div class="home-buttons">
+    <ion-row class="row place-order">
+      <ion-col col-12>
+        <button ion-button class="input_item-btn buttons" block type="submit" (click)="gotoOrder()">PLACE AN ORDER
+          <img src="assets/Sweet_Donuts_images/general/arrow.png" />
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="card-buttons-row">
+      <div class="slides_banner">
+        <ion-slides *ngIf="!showDummyBanner" autoplay="2000" loop="true" speed="1000" pager>
+          <ion-slide *ngFor="let slide of BannerImages" (click)="gotoDeal(slide)">
+            <img-loader src={{encodeURL(imgPathServer,slide.BundleImageUsr)}} useImg></img-loader>
+            <!-- </div> -->
+          </ion-slide>
+        </ion-slides>
+        <ion-slides *ngIf="showDummyBanner" pager>
+          <ion-slide (click)="dummyBanner()">
+            <img src="{{comboBanner}}">
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </ion-row>
+  </div>
+</ion-content>

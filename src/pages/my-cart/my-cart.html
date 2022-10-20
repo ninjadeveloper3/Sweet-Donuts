@@ -1,0 +1,112 @@
+<!--
+  Generated template for the MyCartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Cart</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="cart_items.length !== 0" class="ion_list">
+    <ion-item-sliding *ngFor="let item of cart_items;let i = index">
+      <ion-item class="cart-item">
+        <ion-row>
+          <ion-col col-3>
+            <ion-avatar item-start class="custom-avatar">
+              <img src="{{ImageBaseURL}}{{item.imageURL}}" style="width: 75px;height: 75px;">
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-7 padding (click)="ItemInfo(item)">
+            <div class="prod_title">{{item.FullName}}</div>
+            <div class="prod_price">PKR {{item.base_price * item.qty}}</div>
+            <div *ngIf="item.doptions.length > 0" class="opttruncate">
+              <span *ngFor="let opt of item.doptions">
+                {{opt.OptionName}}
+              </span>
+            </div>
+          </ion-col>
+          <ion-col col-4 text-center class="inc-dec-sec">
+            <div class="inc-dec">
+              <button clear class="inc-dec-btn minus" (click)="incrementQty(item)">
+                <ion-icon name="add" class="add-remove"></ion-icon>
+              </button>
+              <span>{{item.qty}}</span>
+              <button clear class="inc-dec-btn minus" (click)="decrementQty(item)">
+                <ion-icon name="remove" class="add-remove"></ion-icon>
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button class="del-button" danger (click)="removeItem(item)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <div class="add-more" *ngIf="cart_items.length != 0">
+    <button ion-button class="input_item-btn outline-btn" outline block type="submit" (click)="addMoreItems()">ADD MORE
+      ITEMS
+      <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+    </button>
+    <ion-textarea [(ngModel)]="instructions" name="description" class="instructions"
+                  placeholder="Don't want whipped cream? Or any other special instruction? Tell us here."></ion-textarea>
+  </div>
+  <div *ngIf="show" class="emptyMsg">
+    {{emptyMessage}}
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-row class="promo-apply" *ngIf="!PromoAdded">
+      <ion-col col-6>
+        <ion-input type="text" [(ngModel)]="promoCodeValue" value="" onCopy="return false" onDrag="return false"
+                   onDrop="return false"
+                   onCut="return false" onPaste="return false" autocomplete=off class="promo_code"
+                   placeholder="Enter your Discount/Promo Code"></ion-input>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button class="input_item-btn apply-code half-button" block type="submit" (click)="applyCode()">APPLY
+          CODE
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="promo-applied" *ngIf="PromoAdded">
+      <ion-col style="border-bottom: 2px solid #eee5e0">
+        <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"
+                  style="display: -webkit-inline-box; padding: 12px;">
+          <ion-label class="promo-lbl">Discount Applied</ion-label>
+          <ion-icon name="close" class="close" (click)="removeapplyCode()"></ion-icon>
+        </ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="footer-total">
+    <ion-col col-6>
+      <div class="ui-total-bill">Total:</div>
+      <!-- ///////////////////////////////////////////// -->
+      <!-- <div class="total-bill">PKR {{total_price}}/- -->
+      <div class="total-bill">PKR {{calculatedTax}}
+        <span float-right>
+          <ion-badge item-end>{{total_quantity}}</ion-badge>
+          Items
+        </span>
+      </div>
+      <div class="tex-detail">including {{taxPercentage}}% tax</div>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button class="input_item-btn half-button-pink" block type="submit" (click)="gotoCheckoutPage()">
+        CHECKOUT
+        <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

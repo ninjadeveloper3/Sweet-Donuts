@@ -1,0 +1,55 @@
+page-store-timings {
+  .custom-modal .tittle h3 {
+    text-align: center;
+    color: color($colors, dd-button-clr, base);
+    font-size: 16px;
+  }
+
+  .custom-modal .tittle {
+    border-bottom: 0;
+  }
+
+  .custom-modal .tittle h4 {
+    padding: 24px 24px 24px 24px;
+    margin: 0;
+    font-size: 14px;
+    color: grey;
+    text-align: center;
+    word-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .custom-modal {
+    top: 35%;
+    height: 25%;
+    display: inline-grid;
+    align-items: center;
+    font-family: 'Gotham Book';
+  }
+
+  .bg {
+    background-image: url(../assets/Sweet_Donuts_images/Add-to-cart-popup/ATC-popup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .footer-md::before {
+    top: -2000000px;
+  }
+
+  .footer {
+    margin: 20px;
+    width: 90%;
+    font-family: 'Gotham Book';
+  }
+
+  .outline-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

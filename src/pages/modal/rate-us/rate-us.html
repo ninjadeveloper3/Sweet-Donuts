@@ -1,0 +1,41 @@
+<!--
+  Generated template for the RateUsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="bg">
+  <div class="custom-modal">
+    <!-- new feedback modal -->
+    <div style="padding: 20px" class="feedback-modlal">
+      <div class="tittle">
+        <h3>Rate Us</h3>
+        <h4>Show your love as per your experience!</h4>
+      </div>
+      <!--use it when you need to do something when user clicks on a star. in case you only need to change ngModel property, this property can be ommited.-->
+      <div class="star-rating">
+        <div class="star-rating__wrap">
+          <input class="star-rating__input" (click)="rate(5)" id="star-rating-5" type="radio" name="rating" value="5">
+          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 out of 5 stars"></label>
+          <input class="star-rating__input" id="star-rating-4" (click)="rate(4)" type="radio" name="rating" value="4">
+          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 out of 5 stars"></label>
+          <input class="star-rating__input" id="star-rating-3" (click)="rate(3)" type="radio" name="rating" value="3">
+          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 out of 5 stars"></label>
+          <input class="star-rating__input" id="star-rating-2" (click)="rate(2)" type="radio" name="rating" value="2">
+          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 out of 5 stars"></label>
+          <input class="star-rating__input" id="star-rating-1" (click)="rate(1)" type="radio" name="rating" value="1">
+          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
+        </div>
+      </div>
+    </div>
+    <!-- end new feedback modal  -->
+  </div>
+  <ion-footer class="footer">
+    <div class="margin">
+      <button ion-button class="input_item-btn modal-btn" style="background: white" block type="submit" round (click)="orderHistory()">DONE
+        <img src="assets/Sweet_Donuts_images/general/orange-arrow.png" />
+      </button>
+    </div>
+  </ion-footer>
+
+</ion-content>

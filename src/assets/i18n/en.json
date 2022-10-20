@@ -1,0 +1,8 @@
+{
+  "HELLO": "Welcome to ",
+  "MENU" : {
+  	"PORTUGUESE" : "in Portuguese", 
+	"ENGLISH" : "in English",
+	"FRENCH" : "in French"
+  }
+}

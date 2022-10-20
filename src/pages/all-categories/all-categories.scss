@@ -1,0 +1,30 @@
+page-all-categories {
+  ion-grid.card-grid {
+    padding: 5px 5px 5px 5px;
+  }
+
+  .image-bg-card-title {
+    padding: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    display: inline-grid;
+    font-family: 'Gotham-medium' !important;
+  }
+  .card-ios{
+    .image-bg-card-title{
+      @extend .image-bg-card-title;
+      display: -webkit-box !important;
+    }
+  } 
+
+  ion-card img {
+    height: 100%;
+    display: block;
+  }
+
+  .Card-btn.card.card-ios {
+    display: block;
+  }
+
+}

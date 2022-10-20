@@ -1,0 +1,77 @@
+page-rate-us {
+  .bg {
+    background-image: url(../assets/Sweet_Donuts_images/Forgot-password-popup/forgot-password-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .custom-modal {
+    top: 30%;
+  }
+  // rating stars
+  .star-rating {
+    font-size: 0;
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+
+  .star-rating__wrap {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  .star-rating__wrap:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .star-rating__ico {
+    float: right;
+    padding: 2px;
+    cursor: pointer;
+    color: color($colors, dd-button-clr, base);
+  }
+
+  .star-rating__ico:last-child {
+    padding-left: 0;
+  }
+
+  .star-rating__input {
+    display: none;
+  }
+
+  .star-rating__ico:hover:before,
+  .star-rating__ico:hover ~ .star-rating__ico:before,
+  .star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\f005";
+  } //rating stars End
+
+  .tittle h3 {
+    padding: 1em 0 1em 0;
+  }
+
+  .tittle h4 {
+    padding: 2em 0 2em 0;
+    margin-bottom: 0;
+    font-size: 14px !important;
+    font-weight: 600;
+  }
+
+  .footer {
+    margin: 18px;
+    width: 90%;
+  }
+
+  .footer-md::before,
+  .footer-ios::before {
+    display: none;
+  }
+
+  .modal-btn {
+    color: color($colors, orange-heart, base);
+    background: white;
+    padding-right: 0px;
+  }
+}

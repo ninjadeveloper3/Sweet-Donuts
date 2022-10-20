@@ -1,0 +1,234 @@
+page-order-history {
+  ion-list {
+    background: #eee5e0;
+    padding: 1px 0px;
+  }
+
+  .item {
+    padding-left: 0px;
+    margin: 10px 0px;
+
+    .item-inner {
+      padding-left: 8px;
+      border-bottom: 0px solid #eee5e0 !important;
+    }
+  }
+
+  .history-item {
+    // border-left: 0.3em #c0c0c0 solid;
+    border-top: 0.1em solid #c0c0c0;
+    // border-bottom: 0.1em solid #c0c0c0;
+    background: #ffffff;
+    padding: 1em 0 0px 12px;
+    margin-top: 0.5em;
+    margin-bottom: 8px;
+  }
+
+  .order-data-a {
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    float: left;
+    min-height: 1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .order-no {
+      font-family: 'Gotham-medium' !important;
+    }
+
+    .order-items,
+    .order-address {
+      font-family: 'Gotham Book'!important;
+    }
+
+    .order-price {
+      font-family: 'Gotham-medium' !important;
+    }
+  }
+
+  .order-data-b {
+    width: 30%;
+    @extend .order-data-a;
+
+    .order-date {
+      font-family: 'Gotham Book'!important;
+    }
+  }
+
+  .history-item .order-status {
+    background: #c0c0c0;
+    position: absolute;
+    font-size: 75%;
+    color: #ffffff;
+    padding: 0.3em 0.3em;
+    right: 0;
+    text-align: center;
+    text-shadow: none;
+    margin-top: -2.2em;
+    width: 30%;
+    font-family: 'Gotham-medium' !important;
+  }
+
+  .history-item-md .order-status-md {
+    margin-top: -2.4em;
+  }
+
+  .order-status {
+    width: 25%;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+
+  .history-item.PENDING .order-status,
+  .history-item.grey .order-status {
+    background: #e45a0f;
+  }
+
+  .history-item .order-date {
+    color: #8d8d8d;
+    font-weight: normal;
+    text-transform: initial;
+    float: right;
+    padding-top: 0;
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .history-item .order-reorder {
+    position: relative;
+    bottom: 18px;
+    position: absolute;
+    margin-right: 0px;
+    font-size: 75%;
+    color: #ffffff;
+    padding: 0.3em 0.3em;
+    right: 4px;
+    text-align: center;
+    text-shadow: none;
+    margin-top: -2.4em;
+    width: 26%;
+  }
+
+  .history-item .order-items {
+    color: #8d8d8d;
+    font-weight: normal;
+    font-size: 90%;
+    text-transform: initial;
+    padding: 0.3em 0 0 0;
+  }
+
+  .history-item .order-address {
+    @extend .order-items;
+  }
+
+  .history-item .order-price {
+    color: #f6821f;
+    font-weight: 500;
+    font-size: 90%;
+    text-transform: initial;
+    padding: 0.5em 0 0 0;
+  }
+  // -------status classes-----------Delivered---------
+  .history-item.DELIVERED .order-status,
+  .history-item.green .order-status {
+    background: #0f9115;
+  }
+
+  .history-item.DELIVERED,
+  .history-item.green {
+    border-top: 1px solid #0f9115;
+  }
+  // -------status classes-----------confirmed---------
+  .history-item.CONFIRMED .order-status,
+  .history-item.green .order-status {
+    background: #e45a0f;
+  }
+
+  .history-item.CONFIRMED,
+  .history-item.green {
+    border-top: 1px solid #e45a0f;
+  }
+  // -------status classes--------Ready/On the way-------
+  .history-item.READY .order-status,
+  .history-item.ONTHEWAY .order-status,
+  .history-item.orange .order-status {
+    background: #e6ac1d;
+  }
+
+  .history-item.READY,
+  .history-item.ONTHEWAY,
+  .history-item.orange {
+    border-top: 1px solid #e6ac1d;
+  }
+  // -------status classes--------Dispatched-------
+  .history-item.DISPATCHED .order-status,
+  .history-item.orange .order-status {
+    background: #dbb11d;
+  }
+
+  .history-item.DISPATCHED,
+  .history-item.orange {
+    border-top: 1px solid #e6ac1d;
+  }
+  // -------status classes-----------Cancelled---------
+  .history-item.CANCELLED .order-status,
+  .history-item.red .order-status {
+    background: #da0203;
+  }
+
+  .history-item.REJECTED,
+  .history-item.red {
+    border-top: 1px solid #da0203;
+  }
+
+  .history-item.REJECTED .order-status,
+  .history-item.red .order-status {
+    background: #da0203;
+  }
+
+  .history-item.REJECTED,
+  .history-item.red {
+    border-top: 1px solid #da0203;
+  }
+  // -------status classes-----------Pending---------
+  .history-item.PENDING .order-status,
+  .history-item.grey .order-status {
+    background: #e45a0f;
+  }
+
+  .history-item.PENDING,
+  .history-item.grey {
+    border-top: 1px solid #e45a0f;
+    overflow: hidden;
+    padding: 1em 0 0px 12px;
+  }
+  // --------------
+  .re-order-btn {
+    border: 2px solid #f6821f;
+    box-shadow: none;
+    padding: 0.2em 0px 0.2em 0px;
+    text-transform: capitalize;
+    background-color: #fff;
+    color: #f6821f;
+    font-size: 12px;
+    width: 100%;
+    margin: 0 0 0 0;
+    border-radius: 1px !important;
+    font-family: 'Gotham-medium';
+  }
+  // Error message 
+  .emptyMsg {
+    position: absolute;
+    top: 13em;
+    left: 20%;
+    right: 0;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    word-wrap: break-word;
+  }
+}

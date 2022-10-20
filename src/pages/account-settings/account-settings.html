@@ -1,0 +1,100 @@
+<!--
+  Generated template for the AccountSettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>My Account</ion-title>
+    </ion-navbar>
+  </ion-header>
+</ion-header>
+<ion-content class="signup-background">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)" class="profile-info-form" novalidate>
+    <div class="myWrapper">
+      <ion-item class="input-item-dd input-signup" no-lines>
+        <ion-input type="text" value="" placeholder="First Name*" formControlName="fname" [(ngModel)]="userData.fname"
+          onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+          autocomplete=off [class.error1]="!userForm.controls.fname.valid && userForm.controls.fname.dirty"></ion-input>
+      </ion-item>
+      <div class="dobIconEdit"></div>
+    </div>
+    <!-- ERROR -->
+    <ion-item no-lines *ngIf="( userForm.get('fname').hasError('pattern') || userForm.get('fname').hasError('required') ) && userForm.get('fname').touched">
+      <div class="error" *ngIf="userForm.get('fname').hasError('required') && userForm.get('fname').touched">
+        Please enter your first name
+      </div>
+      <div class="error" *ngIf="userForm.get('fname').hasError('pattern')  && userForm.get('fname').touched">
+        Invalid pateren
+      </div>
+    </ion-item>
+    <!-- // ERROR -->
+    <div class="divider" no-padding></div>
+
+    <div class="myWrapper">
+      <ion-item class="input-item-dd input-signup" no-lines>
+        <ion-input type="text" value="" placeholder="Last Name" formControlName="lname" [(ngModel)]="userData.lname"
+          onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+          autocomplete=off [class.error1]="!userForm.controls.lname.valid && userForm.controls.lname.dirty"></ion-input>
+
+      </ion-item>
+      <div class="dobIconEdit"></div>
+    </div>
+    <div class="divider" no-padding></div>
+
+    <ion-item class="input-item-dd input-signup" no-lines>
+      <ion-input type="email" value="" disabled="true" placeholder="Example@gmail.com*" formControlName="email" id="email"
+        onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+        autocomplete=off [(ngModel)]="userData.email"></ion-input>
+    </ion-item>
+    <!-- ERROR -->
+    <!-- // ERROR -->
+    <div class="divider" no-padding></div>
+
+    <ion-item class="input-item-dd input-signup" no-lines>
+      <ion-input type="tel" value="" disabled="true" placeholder="03xx xxxxxxx*" formControlName="phone" onCopy="return false"
+        onDrag="return false" onCut="return false" onDrop="return false" onPaste="return false" autocomplete=off
+        [(ngModel)]="userData.phone"></ion-input>
+    </ion-item>
+    <!-- ERROR -->
+    <!-- // ERROR -->
+    <div class="divider" no-padding></div>
+
+    <ion-row>
+      <ion-item class="input-item-dd input-signup" style="width: 50%;border-right: 4px solid #eee5e0;" no-lines>
+        <ion-select [(ngModel)]="gender" formControlName="gender" placeholder="Gender" class="gender">
+          <ion-option value="Female" checked="true">Female</ion-option>
+          <ion-option value="Male">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="input-item-dd input-signup" style="width: 50%" no-lines>
+
+        <ion-datetime displayFormat="D MMM YYYY" min="1970" max="2000" placeholder="DOB" formControlName="DOB">
+
+        </ion-datetime>
+
+      </ion-item>
+      <div class="dobIcon"></div>
+    </ion-row>
+    <div class="divider" no-padding></div>
+
+    <div class="custom_signup_footer">
+      <div>
+        <button ion-button class="input_item-btn login-btn" [disabled]="!userForm.valid" (click)="Save()" block type="submit">SAVE
+          <img src="assets/Sweet_Donuts_images/general/arrow.png" />
+        </button>
+      </div>
+      <div>
+        <button ion-button class="input_item-btn login-btn outline-btn" block type="submit" (click)="ChangePass()">
+          CHANGE PASSWORD
+          <img src="assets/Sweet_Donuts_images/general/pink-arrow.png" />
+        </button>
+      </div>
+    </div>
+  </form>
+</ion-content>

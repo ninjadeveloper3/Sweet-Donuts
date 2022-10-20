@@ -1,0 +1,170 @@
+page-add-adress {
+  .add-adress {
+    background: #eee5e0;
+
+    .error {
+      color: #e11382;
+    }
+
+    ion-input {
+      background: #ffffff;
+      padding: 4px;
+      margin-bottom: 2px;
+      font-size: 14px;
+
+      input {
+        padding-left: 12px;
+      }
+    }
+
+    .tittle h3 {
+      color: #f5841e;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-left: 22px;
+      font-family: 'Gotham Book' !important;
+    }
+
+    .scroll-content {
+      padding: 16px 0px !important;
+    }
+
+    ion-item {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      font-size: 12px;
+      color: black;
+      border-bottom: none;
+
+      .item-inner {
+        padding-right: 0px !important;
+        border-bottom: 0px !important;
+      }
+    }
+
+    button {
+      opacity: 1 !important;
+      width: 90%;
+      font-family: 'Gotham Book' !important;
+      // position: absolute;
+      left: 0;
+      right: 0;
+      // bottom: 20px;
+    }
+  }
+
+  .address-form {
+    padding-bottom: 11.5em;
+  }
+
+  .custom_signup_footer {
+    // padding: 12px 25px 20px 25px;
+    padding: 0 25px 8px 25px;
+  }
+
+  .custom-modalfooter {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    button {
+      padding: 0px 0px;
+
+      .address-form {
+        // padding-bottom: 8em;
+        button {
+          margin-top: -10px;
+          width: 90%;
+          opacity: 1 !important;
+          margin-bottom: 10px;
+          font-family: 'Gotham Book' !important;
+        }
+      }
+
+      .custom_signup_footer {
+        // padding: 12px 25px 20px 25px;
+        padding: 0 25px 8px 25px;
+      }
+
+      .input_item {
+        border-bottom: none;
+      }
+
+      .input_item-btn {
+        margin-top: 150px;
+      }
+
+      .custom-modalfooter {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        button {
+          padding: 0px 0px;
+        }
+      }
+    }
+  }
+
+  .myWrapper {
+    position: relative;
+  }
+
+  .dobIconEdit {
+    position: absolute;
+    top: 20px; //
+    margin: auto; //
+    right: 0;
+    width: 25px;
+    height: 25px;
+    left: 90%;
+    background-image: url(../assets/Sweet_Donuts_images/Home/gps.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+  }
+
+  .cust-address input {
+    padding-right: 10%;
+  }
+
+  .cust-address {
+    margin-bottom: 2px !important;
+
+    .label {
+      margin: 0px 0px 1px 0px !important;
+
+      ion-searchbar#input {
+        padding: 0px;
+
+        .searchbar-input {
+          padding: 4px 40px 0px 22px;
+          height: 55px;
+        }
+      }
+    }
+  }
+
+  .searchbar-search-icon {
+    display: none !important;
+  }
+
+  .suggestions {
+    margin-bottom: 18px !important;
+    width: 100%;
+    margin: auto;
+    /* box-shadow: 0px 0px 1px 0px #bba69a; */
+    /* opacity: 0.8; */
+    position: absolute;
+    z-index: 9999;
+  }
+
+  .searchbar-clear-icon {
+    display: none !important;
+  }
+}
+

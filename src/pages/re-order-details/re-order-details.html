@@ -1,0 +1,65 @@
+<!--
+  Generated template for the OrderReviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Order Review</ion-title>
+    <ion-buttons left>
+      <button icon-only ion-button class="backArea" (click)="pop()">
+        <img src="assets/Sweet_Donuts_images/general/back.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="static-header">
+    <ion-col class="color">
+      YOU HAVE SELECTED THESE ITEMS TO ORDER
+    </ion-col>
+  </ion-row>
+  <ion-row class="items" *ngFor="let item of items.orderInfo">
+    <ion-col col-1 class="itemsQty">{{item.qty}}</ion-col>
+    <ion-col col-7>
+      <span class="item_name">{{item.FullName}}</span>
+      <br>
+      <div class="ingred_Parent">
+        <div *ngIf="item.doptions.length > 0" class="opttruncate" (click)="ItemInfo(item)">
+          <span *ngFor="let opt of item.doptions">
+            {{opt.OptionName}}
+          </span>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col col-2 text-right class="currency">PKR</ion-col>
+    <ion-col col-2 text-right class="currency">{{item.base_price * item.qty}}</ion-col>
+  </ion-row>
+  <ion-row class="static-header">
+    <ion-col class="color">
+      ORDER SUMMARY
+    </ion-col>
+  </ion-row>
+  <ion-row class="items summary_block">
+    <ion-col col-8>subtotal</ion-col>
+    <ion-col col-2 text-right class="currency">PKR</ion-col>
+    <ion-col col-2 text-right class="currency">{{subTotal}}</ion-col>
+  </ion-row>
+  <ion-row class="items summary_block">
+    <ion-col col-8>SST</ion-col>
+    <ion-col col-2 text-right class="currency">PKR</ion-col>
+    <ion-col col-2 text-right class="currency">{{gstAmount}}</ion-col>
+  </ion-row>
+
+  <ion-row class="items summary_block t_price">
+    <ion-col col-8>total</ion-col>
+    <ion-col col-2 text-right class="currency">PKR</ion-col>
+    <ion-col col-2 text-right class="currency">{{totalPrice}}</ion-col>
+  </ion-row>
+  <button ion-button class="input_item-btn order" block type="submit" (click)="ReOrderNow()">RE-ORDER
+    <img src="assets/Sweet_Donuts_images/general/arrow.png" />
+  </button>
+</ion-content>

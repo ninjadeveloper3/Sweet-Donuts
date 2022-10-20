@@ -1,0 +1,41 @@
+<!--
+  Generated template for the FoodFeedbackPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding class="bg-popup">
+  <div class="custom-modal">
+    <!-- new feedback modal -->
+    <div style="padding: 20px" class="feedback-modlal">
+      <div class="tittle">
+        <h3>Feedback!</h3>
+        <h4>How was your journey with us?</h4>
+      </div>
+      <ul id="feedback-r">
+        <li class="feed" (click)="select(1,a)" [ngClass]="{active: isActive(1)}">1</li>
+        <li class="feed" (click)="select(2,a)" [ngClass]="{active: isActive(2)}">2</li>
+        <li class="feed" (click)="select(3,a)" [ngClass]="{active: isActive(3)}">3</li>
+        <li class="feed" (click)="select(4,a)" [ngClass]="{active: isActive(4)}">4</li>
+        <li class="feed" (click)="select(5,a)" [ngClass]="{active: isActive(5)}">5</li>
+        <br>
+        <li class="feed" (click)="select(6,a)" [ngClass]="{active: isActive(6)}">6</li>
+        <li class="feed" (click)="select(7,a)" [ngClass]="{active: isActive(7)}">7</li>
+        <li class="feed" (click)="select(8,a)" [ngClass]="{active: isActive(8)}">8</li>
+        <li class="feed" (click)="select(9,a)" [ngClass]="{active: isActive(9)}">9</li>
+        <li class="feed" (click)="select(10,a)" [ngClass]="{active: isActive(10)}">10</li>
+      </ul>
+      <ion-label text-left>REMARKS:</ion-label>
+      <ion-textarea #a [(ngModel)]="remarks" type="text" rows="3" maxLength="500" class="remarks"></ion-textarea>
+    </div>
+    <!-- end new feedback modal  -->
+  </div>
+
+</ion-content>
+<ion-footer class="custom-modalfooter">
+  <button ion-button class="input_item-btn" block type="submit" (click)="submit()" round>SUBMIT
+    <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+  </button>
+</ion-footer>

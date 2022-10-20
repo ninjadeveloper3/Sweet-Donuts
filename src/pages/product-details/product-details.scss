@@ -1,0 +1,335 @@
+page-product-details {
+  ion-header,
+  ion-navbar {
+    height: 80px; //by default 56px
+  }
+
+  #cust-prod-btn {
+    background: transparent;
+    padding: 0px;
+
+    .parent {
+      background: #fff;
+      padding: 0px 16px 0px 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cust-option-lable {
+    font-family: 'Gotham Book' !important;
+    color: #9d9d9d;
+  }
+
+  .arrow_up {
+    // position: absolute;
+    color: rgb(244, 130, 31);
+    // right: 10px;
+    // top: 16px;
+    height: 15px;
+    top: 0;
+    position: relative;
+    width: 15px;
+  }
+
+  .arrow_down {
+    @extend .arrow_up;
+  }
+
+  ion-content {
+    background: #eee5e0;
+  }
+
+  .detail-card {
+    width: 100%;
+    background: #ffff;
+    margin: -17px 0px 0px 0px;
+
+    .detail-card-img {
+      position: relative;
+      height: 200px;
+      width: 100%;
+
+      .prod_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // height: 200px;
+      }
+
+      // .divider {
+      //   padding-top: 0px;
+      //   margin-top: -4px;
+      //   border-bottom: 10px solid #eee5e0;
+      // }
+
+      .fav_heart {
+        width: 100%;
+        bottom: 60px;
+        background: transparent;
+        height: 0;
+        position: absolute;
+      }
+
+      ion-icon {
+        position: absolute;
+        font-size: 27px;
+        right: 20px;
+        top: 16px;
+      }
+
+      ion-icon.icon.icon-md.ion-md-share {
+        right: 35px;
+      }
+    }
+
+    .prod_title {
+      font-size: 1.5em;
+      width: 90%;
+      color: #fe6a14;
+      font-family: 'Gotham-black' !important;
+    }
+
+    .custom-card-content {
+      position: relative;
+      height: 100%;
+      padding: 0px;
+      background: #eee5e0;
+      padding-top: 10px;
+
+      .row {
+        padding: 16px;
+        background: #ffffff;
+        margin-top: 10px;
+
+        .pricing_card {
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 100%;
+        }
+      }
+    }
+
+    .arrow img,
+     {
+      height: auto;
+      width: 13px;
+    }
+
+    .prod_descp {
+      font-size: 1em;
+      height: 100%;
+      max-height: 100%;
+      color: #4a4a4a;
+      font-family: 'Gotham Book' !important;
+    }
+
+    .price-lbl {
+      display: initial;
+      font-weight: bold;
+      color: #f4821f;
+      font-size: 1.4rem;
+    }
+
+    .pricing {
+      @extend .price-lbl;
+      color: color($colors, dd-button-clr, base);
+    }
+  }
+
+  .ATC {
+    background: #e11382;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Gotham Book' !important;
+  }
+
+  .prod-title {
+    font-size: 1.4em;
+    color: color($colors, white_color, base);
+  }
+
+  .divider {
+    // border-top: 4px solid !important;
+    //padding-bottom: 8px;
+    // border-top: 1px solid #eee5e0 !important;
+    margin-bottom: 0px !important;
+    border-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .top-border {
+    height: 2px;
+    // margin-top: 2em;
+  }
+
+  .accordion-list {
+    // background: lightblue;
+    height: 100%;
+
+    p {
+      display: inline-block;
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  .sub-optn {
+    border-top: 1px solid #eee5e0 !important;
+    margin-top: 20px !important;
+    height: 100%;
+  }
+
+  // .comment_area::before {
+  //   content: "";
+  //   position: absolute;
+  //   height: 10px;
+  //   background: #eee5e0;
+  //   width: 100%;
+  //   left: 0;
+  //   right: 0;
+  //   margin-top: -20px;
+  // }
+  .counter {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    background: #ffffff;
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 20px 20px 20px 16px;
+    margin-top: 0px;
+  }
+
+  .pricing_row {
+    margin-bottom: 10px;
+  }
+
+  .counter p {
+    display: initial;
+    line-height: 2;
+    font-weight: 1.4rem;
+    font-family: 'Gotham-bold' !important;
+    color: #4a4a4a;
+  }
+
+  .quantity {
+    width: auto;
+    display: inline-flex;
+    float: right;
+
+    .add-remove {
+      background: transparent;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        line-height: 30px;
+      }
+    }
+
+    .add-remove.activated {
+      color: #ffffff;
+      background: #e11382;
+    }
+  }
+
+  .section {
+    background: #fff;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  .section ~ .parent-option-list {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .parent-option-list {
+    margin-top: 0px !important;
+    border-top: none !important;
+    padding-bottom: 0px !important;
+  }
+
+  .section-active {
+    background: color($colors, dd-button-clr, base);
+    margin-bottom: 16px !important;
+    padding-bottom: 0px !important;
+    // color: #fff !important;
+  }
+
+  .accordion-list {
+    width: 100%;
+    margin-bottom: 0;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
+  }
+
+  .parent .outer-button {
+    width: 100%;
+    font-weight: 600;
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding: 0px !important;
+    font-size: 1.4rem;
+    margin: 24px 0;
+    font-family: 'Gotham-bold' !important;
+    color: #4a4a4a;
+
+    ion-icon {
+      position: initial;
+    }
+  }
+
+  .inner_list_content {
+    padding: 0 20px !important;
+    margin-bottom: 16px;
+  }
+
+  .options {
+    font-size: 12px;
+    padding-left: 0px;
+    margin: 10px 0 10px 0px;
+  }
+
+  .option-list ion-item {
+    border-bottom: 1px solid #b7b7b7;
+    margin-bottom: 20px;
+    padding: 0px 16px 0px 16px;
+  }
+
+  .txtarea {
+    margin-top: 16px;
+    border: 1px solid #b7b7b7;
+    // padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+
+  .item-md.item-block .item-inner,
+  .item-ios.item-block .item-inner {
+    padding: 0;
+  }
+
+  ion-footer {
+    padding: 20px 0px;
+    background: #eee5e0;
+
+    .input_item-btn {
+      width: 90%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-md::before,
+  .footer-ios::before {
+    display: none;
+  }
+}

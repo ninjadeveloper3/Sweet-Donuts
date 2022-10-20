@@ -1,0 +1,1125 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import "theme/variables";
+// @import "../assets/fonts/stylesheet.css";
+// --------------Font setting-----------------
+// @font-face {
+//   font-family: 'Gotham-Black';
+//   src: url('../assets/font/GothamBook');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// * {
+//   font-family: 'Gotham Book' !important;
+// }
+// --------------------------------------------
+control-messages div {
+  color: color($colors, error, base);
+  margin: 6px 0;
+  width: 90%;
+  margin: 10px auto 0;
+}
+
+Input::-webkit-input-placeholder {
+  font-family: 'Gotham Book';
+  // text-transform: capitalize;
+  color: #000000;
+}
+
+Input:-ms-input-placeholder {
+  font-family: 'Gotham Book';
+  // text-transform: capitalize;
+  color: #000000;
+}
+
+Input:-moz-placeholder {
+  font-family: 'Gotham Book';
+  // text-transform: capitalize;
+  color: #000000;
+}
+
+Input::-moz-placeholder {
+  font-family: 'Gotham Book';
+  // text-transform: capitalize;
+  color: #000000;
+}
+
+button img {
+  margin-top: -3px;
+}
+
+.ion-page > ion-content {
+  background: color($colors, dd_background, base);
+}
+
+.bar-button-menutoggle-md,
+.bar-button-menutoggle-ios {
+  margin: 0px;
+}
+
+.backArea::after {
+  left: 0px;
+  right: -8px;
+  top: -7px;
+  bottom: -6px;
+  position: absolute;
+  content: "";
+}
+
+.brand-logo.txt {
+  font-family: 'LemonRegular';
+  font-size: 20px;
+  position: relative;
+}
+
+.arrowback {
+  padding-left: 10px;
+  width: 20px;
+  position: absolute;
+  left: 12px;
+  top: 30px;
+}
+
+.ion-page > ion-header,
+.ion-page > .header-ios {
+  height: 80px;
+  background-repeat: no-repeat;
+  // background-size:cover;
+  text-align: center;
+  background-size: 100% 100%;
+  background-image: url(../assets/Sweet_Donuts_images/general/header-background.png);
+
+  .title-ios {
+    padding-top: 0px !important;
+    min-height: 0px !important;
+    height: 0px !important;
+    width: 96%;
+  }
+
+  .toolbar-title-ios {
+    padding-right: 22px;
+    font-weight: 400;
+  }
+}
+
+ion-navbar {
+  height: 80px;
+}
+
+.input_item {
+  margin: 10px auto 0;
+  background: transparent;
+  width: 100%;
+  padding-left: 0;
+  color: white;
+  border-bottom: 1px solid;
+}
+
+.input_item-btn {
+  @extend .input_item;
+  color: color($colors, white_color, base);
+  background: color($colors, dd-button-clr, base);
+  border-radius: 0;
+  font-size: 1.2em;
+  padding: 0px;
+  border-bottom: none;
+
+  img {
+    padding: 1px 0px 1px 8px;
+    height: 14px;
+  }
+}
+
+.input_item-btn.outline-btn {
+  img {
+    padding-right: 8px;
+  }
+}
+
+.input-item-dd {
+  @extend .input_item;
+  @extend .input_item-btn;
+  background: transparent;
+  width: 100%;
+  padding-left: 0;
+  color: black;
+}
+
+.button-md.activated,
+.button-ios.activated {
+  background-color: white;
+  color: black;
+}
+
+// -----------------------------------------------
+
+// ---------------drop down------------
+ion-item.drop-down {
+  background-color: color($colors, dropDown_bg, base);
+  border-color: color($colors, border_clr, base);
+  color: color($colors, dark, base);
+  border-width: 1px;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  text-shadow: 0 1px 0 #f3f3f3;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+ion-select {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.item-radio-checked.item-md ion-label {
+  color: #000000;
+}
+
+.item-radio-checked.item-ios ion-label {
+  color: #000000;
+}
+
+// ---------------------------------------
+//-------------bottom divider-------------
+.divider {
+  width: 100%;
+  border-bottom: 4px #efe7e1 solid;
+  padding-top: 16px;
+}
+
+// ------------------------------------
+// ----------------hrart-------------------
+.fav_heart {
+  color: color($colors, dd-button-clr, base);
+  background: transparent;
+  font-size: 1em;
+  width: 30px;
+  height: 30px;
+
+  .ion-md-heart-outline:before,
+  .ion-ios-heart-outline:before {
+    content: "\f307";
+    color: white;
+  }
+}
+
+// ------------products Card--------------
+ion-card.custom-card.card.card-md,
+ion-card.custom-card.card.card-ios {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ion-card-content.custom-card-content.card-content.card-content-md,
+ion-card-content.custom-card-content.card-content.card-content-ios {
+  padding: 0;
+}
+
+ion-grid.grid {
+  padding: 0%;
+}
+
+img.prod_img {
+  max-width: 100%;
+  height: 7em;
+}
+
+.prod_title {
+  color: color($colors, dd-button-clr, base);
+  font-family: 'Gotham-bold' !important;
+  font-size: 16px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prod_descp {
+  color: color($colors, description_txt, base);
+  font-weight: normal;
+  font-size: .7em;
+  text-transform: initial;
+  max-height: 8em;
+  height: 8em;
+  overflow: hidden;
+  margin-top: 3%;
+}
+
+// -----------------------------------------
+// *************category Card***************
+ion-grid.card-grid {
+  padding: 16px 5px 5px 5px;
+}
+
+ion-card.Card-btn {
+  height: 110px;
+  margin: 0px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.image-bg-card-title {
+  position: absolute;
+  font-weight: normal;
+  font-size: 1.2em;
+  width: 100%;
+  color: #ffffff;
+  text-align: -webkit-center;
+  top: 0;
+  bottom: 0;
+}
+
+// -----------toolbar with icon-------------
+.toolbar_icon {
+  display: inline-block;
+  width: 80%;
+  text-align: -webkit-center;
+}
+
+// -----------------------------------------
+// ---------Footer Continue button----------
+.ui-continue-button {
+  text-align: center;
+  padding: 0.8em 0;
+}
+
+.ui-continue-button img {
+  max-width: 25%;
+}
+
+// -----------------------------------------
+// --------background-----------------------
+// .background {
+//   background: color($colors, dd_background, base);
+// }
+// -----------------------------------------
+// ********************order review/reorder**************
+.items {
+  background-color: color($colors, app_background, base);
+  border-color: #bbb;
+  color: color($colors, dark, base);
+  text-shadow: 0 1px 0 #f3f3f3;
+  font-size: 75%;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 101%;
+  background: color($colors, white_color, base);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 90%;
+}
+
+.sidebar-menue {
+  .item-inner {
+    border-bottom: 1px solid #7d493b !important;
+
+    .label {
+      font-family: 'Gotham-light' !important;
+    }
+  }
+}
+
+.static-header {
+  // background: color($colors, review_header_clr, base);
+  padding: 1em;
+}
+
+.items {
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.price {
+  color: color($colors, app_theme_clr, base);
+}
+
+.address_title {
+  width: 100%;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button {
+  border-radius: 3px !important;
+}
+
+.parent_footer_address.items {
+  background: color($colors, white_color, base);
+  padding: 1em 8%;
+  width: 100%;
+  display: inline-table;
+}
+
+.summary_name {
+  color: color($colors, app_theme_clr, base);
+  text-transform: capitalize;
+  padding: 0.25em 0;
+}
+
+.summary_adress {
+  @extend .summary_name;
+  text-transform: initial;
+  color: color($colors, dark, base);
+}
+
+.half-btn {
+  box-shadow: none;
+  border: none;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  background: transparent;
+  color: #f5f6f1;
+  text-shadow: none;
+  background-color: #c2562f;
+  width: auto;
+  left: 33%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+// *****************************************************
+// ************Custom Back arrow + title toolbar********
+.custom-toolbar {
+  position: absolute;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+// *****************************************************
+// *************App side menu logo**********************
+.main {
+  padding: 20% 0px 0px 0px;
+}
+
+.logo {
+  background-image: url(../assets/Sweet_Donuts_images/Forgot-password/logo.png);
+  right: 0;
+  left: 0;
+  height: 50px;
+  height: 5em;
+  width: 12em;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.SideMenuLogo {
+  @extend .logo;
+  background-image: url(../assets/Sweet_Donuts_images/general/side-menu-logo.png);
+  width: 80%;
+  margin-top: 0px;
+  position: absolute;
+}
+
+ion-item.side_menu_logo {
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 0em;
+  margin-bottom: -1em;
+  padding: 1em;
+  height: 20vh;
+  background: color($colors, dd_side_menu, base);
+}
+
+// ***************************************************
+//****************radio color*************************
+.radio-md .radio-icon,
+.radio-ios .radio-icon {
+  border-color: color($colors, dd-button-clr, base) !important;
+}
+
+.radio-ios .radio-checked .radio-inner {
+  border-color: color($colors, dd-button-clr, base);
+}
+
+.radio-md .radio-inner {
+  background-color: color($colors, dd-button-clr, base) !important;
+}
+
+.radio-ios .radio-icon {
+  left: 0;
+  top: 0;
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #787878;
+}
+
+.radio-ios .radio-checked .radio-inner {
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  border-radius: 5px;
+  background: #e11382;
+}
+
+// *************************************************
+// ***********side menu*******************************
+.menu-inner ion-list.list {
+  padding: 20px 0px;
+}
+
+.footer_label {
+  height: 35px;
+  background: color($colors, app_theme_clr, base);
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  color: color($colors, white_color, base);
+  text-align: center;
+  box-shadow: 0 1px 2px #fff, 0 -1px 1px #666, inset 0 -3px 1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.list-ios > .item-block:first-child,
+.list-ios > .item-block:last-child {
+  border: none;
+}
+
+// ***********************************************
+// *******************Toolbar*********************
+.header .toolbar-content-md {
+  position: absolute;
+  width: 98%;
+}
+
+.header .toolbar-content-ios {
+  position: relative;
+  width: 98%;
+}
+
+.toolbar-background {
+  background: transparent;
+}
+
+ion-navbar img {
+  padding-left: 8px;
+  float: right;
+  width: 20px;
+  height: 20px;
+}
+
+.toolbar-title {
+  color: color($colors, white_color, base);
+  font-family: 'Gotham-medium' !important;
+  font-size: 2rem !important;
+  letter-spacing: 0.5px;
+}
+
+.ion-ios-menu:before,
+.ion-md-menu:before {
+  color: color($colors, white_color, base);
+}
+
+.toolbar-ios ion-title {
+  padding: 0px;
+  min-height: 0px !important;
+  height: 0px;
+}
+
+.custom-avatar {
+  margin: 0;
+  width: 75px;
+  height: 75px;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .ios .toolbar.toolbar-ios {
+    padding-top: calc(constant(safe-area-inset-top) + 0px) !important;
+    padding-top: calc(env(safe-area-inset-top) + -12px) !important;
+    min-height: calc(44px + constant(safe-area-inset-top)) !important;
+    min-height: calc(0px + env(safe-area-inset-top)) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .header .toolbar-content-md {
+    position: relative;
+  }
+
+  .header .toolbar-content-md ion-title {
+    width: calc(100% - 50px) !important;
+  }
+
+  .header .toolbar-content-md .ion-title {
+    width: calc(100% - 50px) !important;
+  }
+
+  page-home .home-buttons .place-order .col {
+    display: inherit !important;
+  }
+
+  page-combo-details .parent .outer-button {
+    top: 20px !important;
+    right: 0 !important;
+  }
+
+  page-combo-details .parent {
+    position: relative !important;
+  }
+
+  page-combo-details ion-thumbnail {
+    display: inline-block !important;
+  }
+
+  page-all-categories .image-bg-card-title,
+  page-all-categories .card-ios .image-bg-card-title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  page-add-to-cart-modal .custom-modal {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .inc-dec button,
+  .inc-dec button .add-remove {
+    width: 50px;
+  }
+
+  page-my-cart .minus,
+  page-my-cart .inc-dec {
+    display: block;
+    padding: 0px !important;
+  }
+
+  page-my-cart .inc-dec span {
+    display: block;
+  }
+}
+
+ion-icon.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back,
+ion-icon.back-button-icon.icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back {
+  color: color($colors, white_color, base);
+}
+
+span.back-button-text.back-button-text-ios {
+  color: color($colors, white_color, base);
+}
+
+// *****************************************************
+// *********************Loader**************************
+ion-backdrop.backdrop-no-tappable {
+  background: white;
+}
+
+// .loading-ios .loading-content,.loading-md .loading-content{
+//   max-width: 50% !important;
+// }
+
+.loading-md .loading-wrapper,
+.loading-ios .loading-wrapper {
+  background: transparent;
+  box-shadow: none;
+  text-align: center !important;
+  max-width: 130px !important;
+}
+
+// *****************************************************
+// *********************Accordion***********************
+.parent {
+  .outer-button {
+    background: transparent;
+    text-align: left;
+    border-bottom: 1px solid #b7b7b7;
+    border-radius: 0px;
+    padding: 5px 0px;
+  }
+
+  .select-count {
+    width: 70px;
+    display: initial;
+    float: right;
+    font-size: 0.8em;
+    text-align: -webkit-center;
+    padding-top: 2px;
+    color: color($colors, dd-button-clr, base);
+  }
+
+  .list-header-md,
+  .list-header-ios {
+    padding-left: 16px;
+    max-height: 0.6rem;
+    font-size: 1.4rem;
+    color: #757575;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .radio-items {
+    padding-left: 0;
+    background: transparent;
+  }
+
+  .option-list {
+    height: 25px;
+    display: none;
+  }
+
+  .section-active ~ .parent-option-list {
+    .option-list {
+      display: block;
+    }
+  }
+
+  .txtarea {
+    border: 1px solid rgb(183, 183, 183);
+  }
+}
+
+// *******************Quantity************************
+.add-remove {
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #eee5e0;
+}
+
+.qty {
+  background: #e11382;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  line-height: 30px;
+  text-align: center;
+  margin: 0px 4px 0px 4px;
+  color: white;
+}
+
+// *****************************************************
+// ************************Alerts***********************
+.custom-alerts,
+.alert-ios,
+.alert-md {
+  .alert-wrapper {
+    background-color: rgb(247, 247, 247);
+    border-radius: 0px;
+
+    .alert-head {
+      text-align: center;
+      text-transform: capitalize;
+      color: rgb(46, 43, 43);
+    }
+
+    .alert-button-group {
+      border-top: 1px solid #808080;
+      padding: 0px;
+
+      button {
+        width: 50%;
+        padding: 15px;
+        margin: 0px;
+        border-radius: 0px;
+
+        span {
+          justify-content: center;
+          color: #e11382;
+        }
+      }
+
+      button:first-child {
+        border-right: 1px solid #808080;
+      }
+    }
+  }
+}
+
+.alert-ios [aria-checked=true] .alert-radio-label,
+.alert-md [aria-checked=true] .alert-radio-label {
+  color: #e11382;
+}
+
+//.alert-ios [aria-checked=true] .alert-radio-inner
+.alert-ios [aria-checked=true] .alert-radio-inner,
+.alert-md [aria-checked=true] .alert-radio-inner {
+  border-color: #e11382;
+}
+
+.custom-alerts-steps {
+  @extend .custom-alerts;
+
+  .alert-head {
+    text-align: start !important;
+    display: table;
+    padding: 15px 10px;
+    border-bottom: 0.13em solid #c2562f;
+
+    h2 {
+      display: table-cell;
+      color: #c2562f;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 100%;
+    }
+
+    h3 {
+      text-align: right;
+    }
+  }
+
+  .alert-message {
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2e2b2b;
+  }
+
+  .alert-radio-group {
+    border: 0px;
+    overflow: hidden;
+  }
+}
+
+// *******************************************
+// ***********Background Image card***********
+.card-background-page {
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+}
+
+.card-txt-parent {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.4em;
+  padding: 16px;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  color: #fff;
+}
+
+ion-card.cat-details-card {
+  max-height: 25%;
+}
+
+.action-buttons {
+  width: auto;
+  float: right;
+}
+
+.action-buttons > img {
+  width: 25px;
+  height: 25px;
+}
+
+ion-card img {
+  display: inline-block;
+}
+
+// **********************************
+//*************Buttons***************
+
+.outline-btn {
+  background: transparent;
+  color: #e11382;
+  border: 1px solid #e11382;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+// 
+// ADD NEW ADRESS MODAL
+.custom-modalfooter:before {
+  background-image: none;
+}
+
+.custom-modalfooter {
+  padding: 20px 0px;
+
+  button {
+    position: relative;
+    width: 88%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: 1 !important;
+    border-radius: 4px;
+    padding: 20px 0px;
+  }
+}
+
+.custom-modal {
+  position: absolute;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #e11382;
+  background: #fff;
+  opacity: 1;
+  border-radius: 2px;
+  top: 15%;
+
+  .cross-ico {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 50px;
+    border: 1px solid #e11382;
+    z-index: 999;
+
+    ion-icon {
+      line-height: 29px;
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    margin: 0;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 800;
+    color: #7a7b80;
+  }
+
+  p {
+    margin: 0px;
+    color: #7a7b80;
+  }
+
+  .tittle {
+    position: relative;
+    border-bottom: 1px solid #cdcdcd;
+
+    h3 {
+      margin: 0px;
+      padding: 20px;
+      color: #4d4d4d;
+    }
+  }
+
+  .info-tittle {
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    margin-top: 0px;
+    color: #4a4a4a;
+    font-family: 'Gotham-bold';
+  }
+
+  ion-label {
+    font-size: 12px;
+    overflow: initial;
+    white-space: initial;
+    padding-right: 30px;
+    text-transform: capitalize;
+    line-height: 1.3;
+    color: #e11382;
+  }
+
+  form {
+    padding: 0px 20px 42px 20px;
+    max-height: 60vh;
+    overflow-y: scroll;
+
+    ion-input {
+      color: #2e2b2b;
+    }
+  }
+
+  button {
+    // border-radius: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+
+.weekly-schedual {
+  margin-top: 10px;
+
+  h3 {
+    border-top: 1px solid #eee5e0;
+    border-bottom: 1px solid #eee5e0;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    padding-left: 30px;
+  }
+
+  ion-list,
+  .list-ios {
+    color: #75747c;
+    margin-bottom: 10px;
+  }
+}
+
+.dd-checkout {
+  max-height: 70vh;
+  overflow-y: scroll;
+
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+    border-bottom: none !important;
+    font-size: 100%;
+    margin: 0px 0px 5px 0px;
+  }
+
+  h2 {
+    color: #e21483;
+  }
+
+  h3 {
+    color: #9d9d9d;
+  }
+
+  h4 {
+    color: #f68121;
+  }
+}
+
+// cart icon
+.cart-root {
+  background: transparent;
+  position: absolute;
+  right: 5px;
+  font-size: 25px;
+  top: -5px;
+  color: #fff;
+  padding: 0px;
+  height: auto;
+  box-shadow: none;
+}
+
+.cart-root.button-default-ios {
+  top: -18px;
+}
+
+.cart-root.activated {
+  background: transparent;
+}
+
+.feedback-modlal {
+  .tittle {
+    text-align: center;
+    border-bottom: none;
+
+    h3 {
+      color: #e11382;
+      font-size: 18px;
+      font-family: 'Gotham-bold';
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-top: 0px;
+      color: #4a4a4a !important;
+      font-family: 'Gotham-bold';
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      height: 30px;
+      width: 38px;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid grey;
+      margin: 10px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .label {
+    color: #4d4d4d;
+    font-size: 14px;
+  }
+
+  .input_item {
+    .item-inner {
+      border-bottom: 1px solid #dedede;
+    }
+  }
+
+  ion-input {
+    border: 1px solid #eee5e0 !important;
+    min-height: 70px;
+    border-radius: 4px;
+  }
+
+  .feed.active {
+    background: #e11382;
+    color: #fff;
+  }
+
+  .buttoncss {
+    width: 100% !important;
+  }
+}

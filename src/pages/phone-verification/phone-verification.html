@@ -1,0 +1,70 @@
+<!--
+  Generated template for the PhoneVerificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Verify Code</ion-title>
+    <ion-buttons left>
+      <button icon-only ion-button class="backArea" (click)="pop()">
+        <img src="assets/Sweet_Donuts_images/general/back.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="phone_verification_background">
+  <div class="main_container">
+    <div class="title_main">
+      We have sent you an SMS with a code to the number above.
+    </div>
+    <div class="title_sub">
+      To complete your phone number verification,
+      <br> please enter the 6-digit activation code.
+    </div>
+    <form [formGroup]="verificationCodeForm" (ngSubmit)="onSubmit(userForm)" class="codeInputs">
+      <div class="input_container">
+        <ion-input #a type="tel" placeholder="*" maxlength="1" class="code" value="" tabindex="1" onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   formControlName="val1" (keyup)="moveFocus('one',a,b,$event)">1
+        </ion-input>
+        <ion-input #b type="tel" placeholder="*" maxlength="1" class="code" value="" tabindex="2" onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   formControlName="val2" (keyup)="moveFocus('two',b,c,$event)">2
+        </ion-input>
+        <ion-input #c type="tel" placeholder="*" maxlength="1" class="code" value="" tabindex="3" onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   formControlName="val3" (keyup)="moveFocus('three',c,d,$event)">3
+        </ion-input>
+        <div class="spacing"></div>
+        <ion-input #d type="tel" placeholder="*" maxlength="1" class="code" value="" tabindex="4" onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   formControlName="val4" (keyup)="moveFocus('four',d,e,$event)">4
+        </ion-input>
+        <ion-input #e type="tel" placeholder="*" maxlength="1" class="code" value="" tabindex="5" onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   formControlName="val5" (keyup)="moveFocus('five',e,f,$event)">5
+        </ion-input>
+        <ion-input #f type="tel" placeholder="*" maxlength="1" class="code" value="" tabindex="6" onCopy="return false"
+                   onCut="return false" onDrag="return false" onDrop="return false" onPaste="return false"
+                   autocomplete=off
+                   formControlName="val6" (keyup)="moveFocus('six',f,a,$event)">6
+        </ion-input>
+      </div>
+    </form>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <div class="timer_txt">
+    <div *ngIf="hidevalue == false">Resend code in {{maxTime}}</div>
+
+    <ion-label class="resend" *ngIf="hidevalue" (click)="resend()" type="submit">Resend code</ion-label>
+  </div>
+</ion-footer>

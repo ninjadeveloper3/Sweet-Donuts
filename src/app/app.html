@@ -1,0 +1,22 @@
+<ion-menu [content]="content" [swipeEnabled]="false">
+  <ion-header>
+  </ion-header>
+
+  <ion-content style="background: #311901">
+    <ion-item no-lines color="transparnt" class="side_menu_logo" color="dd_side_menu">
+      <div class="SideMenuLogo">
+      </div>
+    </ion-item>
+    <ion-list class="sidebar-menue">
+      <button menuClose ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)" [style.font-weight]="fontWeight(p)"
+        color="dd_side_menu">
+        {{p.title}}
+      </button>
+      <button menuClose ion-item detail-none color="dd_side_menu" style="font-weight: 100" *ngIf="!showButton" (click)="login()">Login</button>
+      <button menuClose ion-item detail-none color="dd_side_menu" style="font-weight: 100" *ngIf="showButton" (click)="logout()">Logout</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

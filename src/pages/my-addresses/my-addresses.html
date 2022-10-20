@@ -1,0 +1,50 @@
+<!--
+  Generated template for the MyAddressesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Addresses</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg" id="btn-fixed">
+  <div style="min-height: calc(100vh - 25vh)">
+    <ion-card class="my-addresses" no-padding *ngFor="let adr of addresses">
+      <ion-card-header class="address-card-header">
+        <span class="Name-color">
+          {{adr.Apartment}}
+        </span>
+        <div class="popover">
+          <button ion-button end icon-only class="popover-dots" (click)="presentPopover(adr)">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <span class="info">{{adr.FirstName}}</span>
+        <br>
+        <span class="adress">{{adr.Street}}, {{adr.City}} </span>
+        <br>
+        <span class="info">{{adr.CellNo}}</span>
+      </ion-card-content>
+    </ion-card>
+    <div *ngIf="show" class="emptyMsg">
+      {{emptyMessage}}
+    </div>
+  </div>
+
+
+
+
+  <button *ngIf="userId !== null" ion-button class="input_item-btn add-address" block type="submit" (click)="addnewAddress()">ADD NEW ADDRESS
+    <img src="assets/Sweet_Donuts_images/general/arrow.png" />
+  </button>
+
+</ion-content>

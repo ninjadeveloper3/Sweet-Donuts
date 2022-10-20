@@ -1,0 +1,63 @@
+<!--
+  Generated template for the CheckoutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Checkout</ion-title>
+    <ion-buttons left>
+      <button icon-only ion-button class="backArea" (click)="pop()">
+        <img src="assets/Sweet_Donuts_images/general/back.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="info-block-a">
+    <div class="title left w85p">Your Address</div>
+    <div class="addAddr-icon">
+      <div class="w15p addnew-address float-right" style="padding: 5px" (click)="addAddress()">
+        Add Address
+      </div>
+      <div class="plus">
+        <img src="assets/Sweet_Donuts_images/Checkout/add-icon.svg" (click)="addAddress()">
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="ui-block-a ico">
+      <img style="margin-top: 15px;" src="assets/Sweet_Donuts_images/Checkout/location.png">
+    </div>
+    <div class="ui-block-b" style="padding-top: 15px">
+      <ion-item class="drop-down">
+        <ion-select [(ngModel)]="addresses" class="select" disabled="{{isEnabled}}" (click)="selectClick()"
+                    (ionChange)="change($event)"
+                    okText="Select" cancelText="Cancel" placeholder="Select Address">
+          <ion-option [value]="data" *ngFor="let data of test_users_data">{{data.Apartment}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+  </div>
+  <div class="info-block-c">
+    <div class="divider-ii"></div>
+    <div class="title left w85p" style="padding-bottom: 15px">Payment Option</div>
+    <div class="divider"></div>
+    <ion-item class="drop-down block-ii">
+      <ion-select [(ngModel)]="payment" class="select" okText="Select" cancelText="Cancel"
+                  placeholder="Select Payment Type"
+                  (ionChange)="PaymentSelect($event)">
+        <ion-option value="1">MCB</ion-option>
+        <ion-option value="2">Cash On Delivery</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div class="info-block-d" *ngIf="promo_code_added">
+    <div class="title left w85p" style="padding-bottom: 15px">Discount/Promo Code Applied</div>
+  </div>
+</ion-content>
+<ion-footer>
+  <button ion-button class="input_item-btn buttons" block type="submit" (click)="gotoOrderReview()">CONTINUE
+    <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+  </button>
+</ion-footer>

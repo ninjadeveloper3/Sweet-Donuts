@@ -1,0 +1,75 @@
+page-account-verification {
+  font-family: 'Gotham Book';
+  control-messages div {
+    font-family: 'Gotham Book';
+  }
+  form {
+    width: 100%;
+    margin: auto;
+  }
+
+  ion-header,
+  ion-navbar {
+    height: 80px;//by default 56px
+  }
+
+  .toolbar-background-md,
+  .toolbar-background-ios {
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-image: url(../assets/images/DD-Products/bg_home.png);
+  }
+
+  .Form_lable {
+    text-align: -webkit-center;
+    color: white;
+    padding: 16px;
+    font-family: 'Gotham Book';
+    font-size: 12px;
+  }
+
+  .label-md,
+  .label-ios {
+    width: 100%;
+  }
+
+  .bg-page {
+    background-image: url(../assets/Sweet_Donuts_images/Forgot-password/background.png);
+    background-repeat: no-repeat;
+    // background: transparent;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .key-btn {
+    background: white;
+    color: color($colors, orange-heart, base);
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Gotham-medium';
+  }
+
+  .key {
+    background: transparent;
+    width: 100%;
+    padding-left: 0;
+    color: white;
+  }
+
+  // *************placeholder*********************
+  .text-input::-moz-placeholder {
+    color: white;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: white;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    color: white;
+  }
+}
+body.keyboard-open.plateform-ios .title_sub{
+  padding: 0px !important;
+}

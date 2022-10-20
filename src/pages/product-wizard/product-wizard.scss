@@ -1,0 +1,56 @@
+page-product-wizard.ion-page {
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    padding: 0% 10%;
+  ion-slides {
+    height: auto;
+    background: #ffffff;
+    margin-top: 50%;
+    .title {
+      border-bottom: 0.13em solid #C2562F;
+      padding: 10px 0px;
+      .toolbar-title {
+        padding: 0px 12px;
+      }
+      span {
+        color: #000000;
+        float: right;
+      }
+      h2 {
+        color: #C2562F;
+        font-weight: bold;
+        text-transform: capitalize;
+        display: inline-block;
+        float: left;
+        margin: 0px;
+      }
+    }
+    .item {
+      background: none;
+      .item-inner{
+        border: none;
+        span {
+        float: right;
+        }
+      }
+    }
+    .swiper-slide {
+      width: 100% !important;
+    }
+  }
+  .footer {
+      display: inline-flex;
+      border-top: 1px solid #d9d9d9;
+      position: relative;
+      background: #ffffff;
+    button {
+      width: 50%;
+      margin: 0px;
+      background: none;
+      color: #333333;
+    }
+    .btnPrev {
+      border-right: 1px solid #d9d9d9;
+    }
+  }
+}

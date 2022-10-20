@@ -1,0 +1,35 @@
+page-category-detail {
+  .card-txt-parent {
+    padding: 16px 12px 4px 8px;
+    line-height: 1.6;
+  }
+
+  .action-buttons img {
+    margin-right: 8px !important;
+  }
+
+  .heart {
+    font-size: 30px;
+  }
+
+  .fav_heart {
+    padding: 0;
+  }
+  .cat-details-card{
+    max-height: 170px;
+    height: 100%;
+    .card-title{
+      font-family: 'Gotham-medium' !important; 
+      text-align: left;
+      width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

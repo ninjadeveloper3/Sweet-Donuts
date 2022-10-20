@@ -1,0 +1,79 @@
+page-phone-verification {
+  .scroll-content {
+    margin-top: 16px !important;
+  }
+
+  .phone_verification_background {
+    background: color($colors, dd_background, base);
+    margin-top: 75px;
+  }
+
+  .main_container {
+    padding: 10% 24px 0px 24px;
+    height: calc(100vh - 10vh);
+    background: white;
+    // overflow: scroll;
+  }
+
+  ion-input {
+    width: 60%;
+  }
+
+  .codeInputs {
+    padding: 0 20px 0px 20px;
+  }
+
+  .title_main {
+    padding: 16px;
+    text-align: center;
+    color: color($colors, orange-heart, base);
+    font-weight: bold;
+  }
+
+  .title_sub {
+    padding: 16px 0px;
+    text-align: center;
+  }
+
+  .code {
+    border-bottom: 2px solid;
+    margin: 0px 4px 16px 4px;
+    width: 62%;
+  }
+
+  .input_container {
+    display: -webkit-inline-box;
+  }
+
+  .margin {
+    margin: 16px 0px 16px 6px;
+  }
+
+  .spacing {
+    padding: 16px;
+  }
+
+  .timer_txt {
+    font-size: 1.4rem;
+    font-size: 1.4rem;
+    background: color($colors, dd_background, base);
+    padding: 16px 0 16px 8px;
+    display: flex;
+  }
+
+  .resend {
+    margin: 0 0 0 0;
+    text-align: left;
+    padding-left: 8px;
+    color: color($colors, dd-button-clr, base);
+    text-decoration: underline;
+  }
+
+  .re-code {
+    width: 100%;
+    display: inline-flex;
+  }
+  .text-input{
+    text-align: center !important;
+  }
+}

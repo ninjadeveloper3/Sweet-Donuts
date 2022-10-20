@@ -1,0 +1,31 @@
+<!--
+  Generated template for the AddToCartModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content class="bg">
+  <div class="custom-modal">
+    <!-- cart Modal-->
+    <!-- <div style="padding: 20px"> -->
+    <h2 class="info-tittle">You have added
+      <br> {{prod_qty.qty}} item to your cart</h2>
+
+    <!-- </div> -->
+    <!-- cart Modal  -->
+  </div>
+  <ion-footer class="footer">
+    <div class="margin">
+      <button ion-button class="input_item-btn" block type="submit" round (click)="addMore()">ADD MORE ITEMS
+        <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+      </button>
+    </div>
+    <div class="margin">
+      <button ion-button class="input_item-btn login-btn outline-btn" block type="submit" (click)="checkout()">
+        CHECKOUT
+        <img src="assets/Sweet_Donuts_images/general/arrow.png"/>
+      </button>
+    </div>
+  </ion-footer>
+</ion-content>

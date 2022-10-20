@@ -1,0 +1,112 @@
+page-re-order-details {
+  .scroll-content {
+    margin-bottom: 0px !important;
+  }
+
+  input.text-input.text-input-md,
+  input.text-input.text-input-ios {
+    margin: 0px 8px;
+  }
+
+  .order-type {
+    padding: 0;
+  }
+
+  .add-more-btn {
+    border: 0.2em solid #c2562f;
+    box-shadow: none;
+    margin: 0 auto;
+    padding: 0.5em;
+    font-size: 100%;
+    width: auto;
+    background-color: #fff;
+    color: #c2562f;
+    text-transform: capitalize;
+  }
+
+  .add-more {
+    background: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    border: none;
+  }
+
+  .color {
+    color: color($colors, orange-heart, base);
+    font-weight: 500;
+    font-family: 'Gotham-medium' !important;
+  }
+
+  .items {
+    border-bottom: 2px solid #f5f6f1;
+    width: 100%;
+    padding: 8px 8px 8px 8px;
+  }
+
+  .itemsQty {
+    text-align: center !important;
+  }
+
+  .item_name {
+    color: color($colors, dd_dark, base);
+    font-family: 'Gotham-medium' !important;
+    text-transform: capitalize;
+  }
+
+  .ingred_Parent {
+    display: flex;
+    color: color($colors, dd_sub_heading, base);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 4px 0 0 0;
+    font-family: 'Gotham-medium' !important;
+  }
+
+  .summary_block {
+    padding: 8px 8px 8px 13px;
+    border-bottom: none;
+    color: color($colors, dd_sub_heading, base);
+    text-transform: capitalize;
+    font-weight: 500;
+
+    .currency {
+      color: color($colors, dd_sub_heading, base);
+    }
+  }
+
+  .currency {
+    color: color($colors, dd_dark, base);
+  }
+
+  ion-row.items.summary_block.t_price {
+    margin-top: 12px !important;
+    color: color($colors, orange-heart, base);
+    font-family: 'Gotham-medium' !important;
+
+    .currency {
+      color: color($colors, orange-heart, base);
+      font-family: 'Gotham-medium' !important;
+    }
+  }
+
+  .footer-md::before,
+  .footer-ios::before {
+    display: none;
+  }
+
+  .order {
+    width: 91%;
+    margin: 0px 0px 16px 16px;
+    bottom: 0;
+    margin: 32px 16px 16px 16px;
+    font-family: 'Gotham-bold' !important;
+  }
+
+  .opttruncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+  }
+}

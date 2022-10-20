@@ -1,0 +1,57 @@
+page-order-thankyou {
+  .scroll-content {
+    overflow: hidden;
+  }
+
+  .thanku_parent {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-align: -webkit-center;
+    font-size: 16px;
+  }
+
+  .bg-page {
+    background-image: url(../assets/Sweet_Donuts_images/Forgot-password/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .logo {
+    background-image: url(../assets/Sweet_Donuts_images/Thankyou/thankyou.png);
+    width: 15%;
+  }
+
+  .congrats h5 {
+    padding: 1.6em 0px 16px 0;
+    font-size: 25px;
+    color: white;
+    font-family: 'Gotham-bold' !important;
+    margin-top: -20px !important;
+  }
+
+  .subTitle h3 {
+    padding: 16px 30px 16px 30px;
+    color: white;
+    font-family: 'Gotham Book' !important;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .Continue {
+    background-color: white;
+    color: color($colors, orange-heart, base);
+    width: 50%;
+    height: 50%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 4px !important;
+    font-family: 'Gotham-bold' !important;
+
+    img {
+      padding-left: 8px;
+    }
+  }
+}
